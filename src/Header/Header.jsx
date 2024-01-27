@@ -1,217 +1,151 @@
-import React from "react";
+import React, { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faGithub,
+  faLinkedinIn,
+  faTwitter,
+} from "@fortawesome/free-brands-svg-icons";
+import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 
 const Header = () => {
+  const [openMenu, setOpenMenu] = useState(() => {
+    return true;
+  });
   return (
-    <header className="bg-white">
-      <nav
-        className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
-        aria-label="Global"
-      >
-        <div className="flex lg:flex-1">
-          <a href="#" className="-m-1.5 p-1.5">
-            <span>Muzamil Dev</span>
-            {/* <img
-              className="h-8 w-auto"
-              src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-              alt=""
-            /> */}
+    <header className="bg-white shadow-md">
+      <nav className="mx-auto max-w-7xl items-center justify-between py-4 px-8 hidden sm:flex">
+        <div className="flex flex-1">
+          {/* Logo */}
+          <a href="#">
+            <img className="w-8 h-8" src="images/logo.png" alt="web logo" />
           </a>
         </div>
-        <div className="flex lg:hidden">
-          <button
-            type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
-          >
-            <span className="sr-only">Open main menu</span>
-            <svg
-              className="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              aria-hidden="true"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-              />
-            </svg>
-          </button>
-        </div>
-        <div className="hidden lg:flex lg:gap-x-12">
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+        {/* Menu Items */}
+        <div className="flex-auto">
+          <a href="#" className="mx-6 font-medium">
             Home
           </a>
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+          <a href="#" className="mx-6 font-medium">
             About
           </a>
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-            Gallery
+          <a href="#" className="mx-6 font-medium">
+            Portfolio
           </a>
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-            Interview
-          </a>
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-            Articles
-          </a>
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+          <a href="#" className="mx-6 font-medium">
             Contact
           </a>
         </div>
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-            Log in
+        {/* Social Icons */}
+        <div className="flex flex-1 justify-end">
+          <a
+            href="https://www.linkedin.com/in/muzamil167/"
+            target="_blank"
+            rel="noreferrer"
+            className="mr-3"
+          >
+            <FontAwesomeIcon icon={faLinkedinIn} />
           </a>
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-            Log in
+          <a
+            href="https://twitter.com/Mernstack_dev"
+            target="_blank"
+            rel="noreferrer"
+            className="mr-3"
+          >
+            <FontAwesomeIcon icon={faTwitter} />
           </a>
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-            Log in
+          <a
+            href="https://github.com/muzamil-frontend-dev"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FontAwesomeIcon icon={faGithub} />
           </a>
         </div>
       </nav>
-      {/* <!-- Mobile menu, show/hide based on menu open state. --> */}
-      <div className="lg:hidden" role="dialog" aria-modal="true">
-        {/* <!-- Background backdrop, show/hide based on slide-over state. --> */}
-        <div className="fixed inset-0 z-10"></div>
-        <div className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-          <div className="flex items-center justify-between">
-            <a href="#" className="-m-1.5 p-1.5">
-              <span className="sr-only">Your Company</span>
+      {/* Mobile header menu */}
+      <nav className="flex max-w-2xl items-center justify-between p-3 px-4 sm:hidden">
+        <div className="flex flex-1">
+          {/* Logo */}
+          <a href="#">
+            <img className="w-8 h-8" src="images/logo.png" alt="" />
+          </a>
+        </div>
+        <button
+          className="flex flex-auto justify-end"
+          onClick={() => setOpenMenu((prev) => !prev)}
+        >
+          <FontAwesomeIcon icon={faBars} />
+        </button>
+        {/* Toggle Menu */}
+        <section
+          className={
+            !openMenu
+              ? "hidden"
+              : "block bg-white absolute top-0 left-0 bottom-0 w-full p-4"
+          }
+        >
+          <div className="flex justify-between pb-2">
+            {/* Logo */}
+            <a href="#">
               <img
-                className="h-8 w-auto"
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                alt=""
+                className="w-8 h-8"
+                src="images/logo.png"
+                alt="website logo"
               />
             </a>
             <button
-              type="button"
-              className="-m-2.5 rounded-md p-2.5 text-gray-700"
+              className="text-xl"
+              onClick={() => setOpenMenu((prev) => !prev)}
             >
-              <span className="sr-only">Close menu</span>
-              <svg
-                className="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
+              <FontAwesomeIcon icon={faXmark} />
             </button>
           </div>
-          <div className="mt-6 flow-root">
-            <div className="-my-6 divide-y divide-gray-500/10">
-              <div className="space-y-2 py-6">
-                <div className="-mx-3">
-                  <button
-                    type="button"
-                    className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                    aria-controls="disclosure-1"
-                    aria-expanded="false"
-                  >
-                    Product
-                    {/* <!--
-                  Expand/collapse icon, toggle classNamees based on menu open state.
-
-                  Open: "rotate-180", Closed: ""
-                --> */}
-                    <svg
-                      className="h-5 w-5 flex-none"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                      aria-hidden="true"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
-                        clip-rule="evenodd"
-                      />
-                    </svg>
-                  </button>
-                  {/* <!-- 'Product' sub-menu, show/hide based on menu state. --> */}
-                  <div className="mt-2 space-y-2" id="disclosure-1">
-                    <a
-                      href="#"
-                      className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                    >
-                      Analytics
-                    </a>
-                    <a
-                      href="#"
-                      className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                    >
-                      Engagement
-                    </a>
-                    <a
-                      href="#"
-                      className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                    >
-                      Security
-                    </a>
-                    <a
-                      href="#"
-                      className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                    >
-                      Integrations
-                    </a>
-                    <a
-                      href="#"
-                      className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                    >
-                      Automations
-                    </a>
-                    <a
-                      href="#"
-                      className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                    >
-                      Watch demo
-                    </a>
-                    <a
-                      href="#"
-                      className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                    >
-                      Contact sales
-                    </a>
-                  </div>
-                </div>
-                <a
-                  href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
-                  Features
-                </a>
-                <a
-                  href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
-                  Marketplace
-                </a>
-                <a
-                  href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
-                  Company
-                </a>
-              </div>
-              <div className="py-6">
-                <a
-                  href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
-                  Log in
-                </a>
-              </div>
-            </div>
+          <hr className="my-2" />
+          {/* Menu Items */}
+          <div className="text-left pb-2">
+            <a href="#" className="block py-2">
+              Home
+            </a>
+            <a href="#" className="block py-2">
+              About
+            </a>
+            <a href="#" className="block py-2">
+              Portfolio
+            </a>
+            <a href="#" className="block py-2">
+              Contact
+            </a>
           </div>
-        </div>
-      </div>
+          <hr className="my-2" />
+          {/* Social Icons */}
+          <div className="text-left pb-2">
+            <h2 className="py-2 font-medium">Links:</h2>
+            <a
+              href="https://www.linkedin.com/in/muzamil167/"
+              target="_blank"
+              rel="noreferrer"
+              className="mr-4"
+            >
+              <FontAwesomeIcon icon={faLinkedinIn} />
+            </a>
+            <a
+              href="https://twitter.com/Mernstack_dev"
+              target="_blank"
+              rel="noreferrer"
+              className="mr-4"
+            >
+              <FontAwesomeIcon icon={faTwitter} />
+            </a>
+            <a
+              href="https://github.com/muzamil-frontend-dev"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FontAwesomeIcon icon={faGithub} />
+            </a>
+          </div>
+        </section>
+      </nav>
     </header>
   );
 };
