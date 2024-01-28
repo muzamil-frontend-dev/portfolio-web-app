@@ -29,7 +29,10 @@ const Header = () => {
             About
           </a>
           <a href="#" className="mx-6 font-medium">
-            Portfolio
+            Projects
+          </a>
+          <a href="#" className="mx-6 font-medium">
+            Blog
           </a>
           <a href="#" className="mx-6 font-medium">
             Contact
@@ -110,7 +113,10 @@ const Header = () => {
               About
             </a>
             <a href="#" className="block py-2">
-              Portfolio
+              Projects
+            </a>
+            <a href="#" className="block py-2">
+              Blog
             </a>
             <a href="#" className="block py-2">
               Contact
