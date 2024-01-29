@@ -3,153 +3,120 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faGithub,
   faLinkedinIn,
-  faTwitter,
+  faXTwitter,
 } from "@fortawesome/free-brands-svg-icons";
+import { Link } from "react-router-dom";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
+import classNames from "classnames";
 
 const Header = () => {
   const [openMenu, setOpenMenu] = useState(() => {
     return true;
   });
+  const menuItems = [
+    { name: "Home", url: "#home" },
+    { name: "About Me", url: "#about" },
+    { name: "What I Do", url: "#services" },
+    { name: "Resume", url: "#resume" },
+    { name: "Portfolio", url: "#portfolio" },
+    { name: "Testimonial", url: "#testimonial" },
+    { name: "Contact", url: "#contact" },
+  ];
   return (
-    <header className="bg-white shadow-md">
-      <nav className="mx-auto max-w-7xl items-center justify-between py-4 px-8 hidden sm:flex">
-        <div className="flex flex-1">
-          {/* Logo */}
-          <a href="#">
-            <img className="w-8 h-8" src="images/logo.png" alt="web logo" />
-          </a>
-        </div>
-        {/* Menu Items */}
-        <div className="flex-auto">
-          <a href="#" className="mx-6 font-medium">
-            Home
-          </a>
-          <a href="#" className="mx-6 font-medium">
-            About
-          </a>
-          <a href="#" className="mx-6 font-medium">
-            Projects
-          </a>
-          <a href="#" className="mx-6 font-medium">
-            Blog
-          </a>
-          <a href="#" className="mx-6 font-medium">
-            Contact
-          </a>
-        </div>
-        {/* Social Icons */}
-        <div className="flex flex-1 justify-end">
-          <a
-            href="https://www.linkedin.com/in/muzamil167/"
-            target="_blank"
-            rel="noreferrer"
-            className="mr-3"
-          >
-            <FontAwesomeIcon icon={faLinkedinIn} />
-          </a>
-          <a
-            href="https://twitter.com/Mernstack_dev"
-            target="_blank"
-            rel="noreferrer"
-            className="mr-3"
-          >
-            <FontAwesomeIcon icon={faTwitter} />
-          </a>
-          <a
-            href="https://github.com/muzamil-frontend-dev"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <FontAwesomeIcon icon={faGithub} />
-          </a>
-        </div>
-      </nav>
-      {/* Mobile header menu */}
-      <nav className="flex max-w-2xl items-center justify-between p-3 px-4 sm:hidden">
-        <div className="flex flex-1">
-          {/* Logo */}
-          <a href="#">
-            <img className="w-8 h-8" src="images/logo.png" alt="" />
-          </a>
-        </div>
-        <button
-          className="flex flex-auto justify-end"
-          onClick={() => setOpenMenu((prev) => !prev)}
-        >
-          <FontAwesomeIcon icon={faBars} />
-        </button>
-        {/* Toggle Menu */}
-        <section
-          className={
-            !openMenu
-              ? "hidden"
-              : "block bg-white absolute top-0 left-0 bottom-0 w-full p-4"
-          }
-        >
-          <div className="flex justify-between pb-2">
-            {/* Logo */}
-            <a href="#">
+    <header className="relative">
+      <nav className="hidden sm:block fixed w-64 h-full bg-black px-8 overflow-y-auto">
+        {/* Profile Section */}
+        <div className="mt-8">
+          <Link as="/">
+            <span className="block p-2 mb-2 bg-gray rounded-full">
               <img
-                className="w-8 h-8"
-                src="images/logo.png"
-                alt="website logo"
+                className="rounded-full"
+                src="images/profile-img.jpg"
+                alt=""
               />
-            </a>
+            </span>
+            <h1 className="text-xl text-center text-white">Muzamil Hussain</h1>
+          </Link>
+        </div>
+        <ul className="my-4">
+          {menuItems.map((item, index) => (
+            <li key={index} className="py-2 text-lg text-white text-center">
+              <Link to={item.url}>{item.name}</Link>
+            </li>
+          ))}
+        </ul>
+        <ul className="flex justify-center items-center mb-2">
+          <li className="text-sm text-gray-2">
+            <Link as="#">
+              <FontAwesomeIcon icon={faLinkedinIn} />
+            </Link>
+          </li>
+          <li className="text-sm text-gray-2 mx-6">
+            <Link as="#">
+              <FontAwesomeIcon icon={faGithub} />
+            </Link>
+          </li>
+          <li className="text-sm text-gray-2">
+            <Link as="#">
+              <FontAwesomeIcon icon={faXTwitter} />
+            </Link>
+          </li>
+        </ul>
+      </nav>
+      {/* Mobile Nav Menu view */}
+      <nav className="block sticky top-0 bg-black sm:hidden">
+        <section className="flex justify-between items-center py-2 px-4">
+          <Link to="/">
+            <h1 className="text-xl text-white">Muzamil Hussain</h1>
+          </Link>
+          <div>
+            <ul className="inline-flex mr-6">
+              <li className="text-sm text-gray-2">
+                <Link as="#">
+                  <FontAwesomeIcon icon={faLinkedinIn} />
+                </Link>
+              </li>
+              <li className="text-sm text-gray-2 mx-3">
+                <Link as="#">
+                  <FontAwesomeIcon icon={faGithub} />
+                </Link>
+              </li>
+              <li className="text-sm text-gray-2">
+                <Link as="#">
+                  <FontAwesomeIcon icon={faXTwitter} />
+                </Link>
+              </li>
+            </ul>
             <button
-              className="text-xl"
+              className="text-white"
               onClick={() => setOpenMenu((prev) => !prev)}
             >
-              <FontAwesomeIcon icon={faXmark} />
+              <FontAwesomeIcon icon={openMenu ? faBars : faXmark} />
             </button>
           </div>
-          <hr className="my-2" />
-          {/* Menu Items */}
-          <div className="text-left pb-2">
-            <a href="#" className="block py-2">
-              Home
-            </a>
-            <a href="#" className="block py-2">
-              About
-            </a>
-            <a href="#" className="block py-2">
-              Projects
-            </a>
-            <a href="#" className="block py-2">
-              Blog
-            </a>
-            <a href="#" className="block py-2">
-              Contact
-            </a>
-          </div>
-          <hr className="my-2" />
-          {/* Social Icons */}
-          <div className="text-left pb-2">
-            <h2 className="py-2 font-medium">Links:</h2>
-            <a
-              href="https://www.linkedin.com/in/muzamil167/"
-              target="_blank"
-              rel="noreferrer"
-              className="mr-4"
-            >
-              <FontAwesomeIcon icon={faLinkedinIn} />
-            </a>
-            <a
-              href="https://twitter.com/Mernstack_dev"
-              target="_blank"
-              rel="noreferrer"
-              className="mr-4"
-            >
-              <FontAwesomeIcon icon={faTwitter} />
-            </a>
-            <a
-              href="https://github.com/muzamil-frontend-dev"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FontAwesomeIcon icon={faGithub} />
-            </a>
-          </div>
+        </section>
+        {/* Toggle Menu */}
+        <section
+          className={classNames(
+            "absolute w-full h-48 bg-slate-50 overflow-y-auto transition-all duration-700 ease-in-out",
+            {
+              "invisible opacity-0": openMenu,
+            },
+            {
+              "visible opacity-100": !openMenu,
+            }
+          )}
+        >
+          <ul className="mt-2">
+            {menuItems.map((item, index) => (
+              <li
+                key={index}
+                className="py-2 px-4 text-md text-white border-b border-slate-100"
+              >
+                <Link to={item.url}>{item.name}</Link>
+              </li>
+            ))}
+          </ul>
         </section>
       </nav>
     </header>
