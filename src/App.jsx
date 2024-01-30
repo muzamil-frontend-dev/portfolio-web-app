@@ -7,7 +7,9 @@ function App() {
     <>
       <Header />
       <main>
-        <Routes>{/* <Route path="/" element={<Hero />} /> */}</Routes>
+        <Routes>
+          <Route path="/" element={<Hero />} />
+        </Routes>
       </main>
     </>
   );
