@@ -4,14 +4,10 @@ import Hero from "./Hero/Hero";
 
 function App() {
   return (
-    <>
+    <div className="flex">
       <Header />
-      <main>
-        <Routes>
-          <Route path="/" element={<Hero />} />
-        </Routes>
-      </main>
-    </>
+      <Hero />
+    </div>
   );
 }
 

@@ -23,8 +23,8 @@ const Header = () => {
     { name: "Contact", url: "#contact" },
   ];
   return (
-    <header className="relative">
-      <nav className="hidden sm:block fixed w-64 h-full bg-black px-8 overflow-y-auto">
+    <header className="relative w-1/5">
+      <nav className="hidden sm:block fixed w-1/5 h-full bg-black px-8 overflow-y-auto">
         {/* Profile Section */}
         <div className="mt-8">
           <Link as="/">

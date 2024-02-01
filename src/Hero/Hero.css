@@ -1,4 +1,4 @@
 .image {
-  /* background-image: url("images/demo.jpg"); */
-  color: white;
+  background-image: url("/public/images/intro-bg.jpg");
+  background-size: cover;
 }
