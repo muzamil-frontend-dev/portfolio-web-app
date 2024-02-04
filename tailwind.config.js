@@ -14,7 +14,9 @@ module.exports = {
       },
       green: "#20c997",
     },
-    extend: {},
+    extend: {
+      poppins: ["Poppins", "sans-serif"],
+    },
   },
   plugins: [],
 };
