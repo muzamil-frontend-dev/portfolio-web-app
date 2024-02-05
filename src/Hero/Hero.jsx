@@ -1,5 +1,6 @@
 import React from "react";
 import "./Hero.css";
+import { TypeAnimation } from "react-type-animation";
 
 const Hero = () => {
   return (
@@ -9,7 +10,20 @@ const Hero = () => {
         <div className="text-white text-center font-medium">
           <h1 className="text-2xl">Welcome</h1>
           <p className="text-6xl my-4">
-            I'm <span>Muzamil Hussain</span>
+            <TypeAnimation
+              sequence={[
+                "I'm Muzamil Hussain",
+                800,
+                "I'm a Developer.",
+                800,
+                "I'm a Designer.",
+                800,
+              ]}
+              wrapper="span"
+              speed={200}
+              repeat={Infinity}
+              className="font-bold"
+            />
           </p>
           <span className="text-2xl text-gray-100">
             based in Lahore, Pakistan
