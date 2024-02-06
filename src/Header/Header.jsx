@@ -23,21 +23,19 @@ const Header = () => {
     { name: "Contact", url: "#contact" },
   ];
   return (
-    <header className="relative w-1/5">
-      <nav className="hidden sm:block fixed w-1/5 h-full bg-black px-8 overflow-y-auto">
+    <header className="w-full sm:w-64">
+      <nav className="hidden sm:block fixed w-64 h-full bg-black px-8 overflow-y-auto">
         {/* Profile Section */}
-        <div className="mt-8">
-          <Link as="/">
-            <span className="block p-2 mb-2 bg-gray rounded-full">
-              <img
-                className="rounded-full"
-                src="images/profile-img.jpg"
-                alt=""
-              />
-            </span>
-            <h1 className="text-xl text-center text-white">Muzamil Hussain</h1>
-          </Link>
-        </div>
+        <Link as="/">
+          <div className="w-40 h-40 mx-auto p-2 mt-8 mb-2 bg-gray-900 rounded-full">
+            <img
+              className="w-full h-full rounded-full"
+              src="images/profile-img.jpg"
+              alt="profile"
+            />
+          </div>
+          <h1 className="text-xl text-center text-white">Muzamil Hussain</h1>
+        </Link>
         <ul className="my-4">
           {menuItems.map((item, index) => (
             <li key={index} className="py-2 text-lg text-white text-center">
@@ -46,17 +44,17 @@ const Header = () => {
           ))}
         </ul>
         <ul className="flex justify-center items-center mb-2">
-          <li className="text-sm text-gray-2">
+          <li className="text-sm text-gray-200">
             <Link as="#">
               <FontAwesomeIcon icon={faLinkedinIn} />
             </Link>
           </li>
-          <li className="text-sm text-gray-2 mx-6">
+          <li className="text-sm text-gray-200 mx-6">
             <Link as="#">
               <FontAwesomeIcon icon={faGithub} />
             </Link>
           </li>
-          <li className="text-sm text-gray-2">
+          <li className="text-sm text-gray-200">
             <Link as="#">
               <FontAwesomeIcon icon={faXTwitter} />
             </Link>
@@ -64,24 +62,24 @@ const Header = () => {
         </ul>
       </nav>
       {/* Mobile Nav Menu view */}
-      <nav className="block sticky top-0 bg-black sm:hidden">
+      <nav className="sticky top-0 bg-black sm:hidden">
         <section className="flex justify-between items-center py-2 px-4">
           <Link to="/">
             <h1 className="text-xl text-white">Muzamil Hussain</h1>
           </Link>
           <div>
             <ul className="inline-flex mr-6">
-              <li className="text-sm text-gray-2">
+              <li className="text-sm text-gray-200">
                 <Link as="#">
                   <FontAwesomeIcon icon={faLinkedinIn} />
                 </Link>
               </li>
-              <li className="text-sm text-gray-2 mx-3">
+              <li className="text-sm text-gray-200 mx-3">
                 <Link as="#">
                   <FontAwesomeIcon icon={faGithub} />
                 </Link>
               </li>
-              <li className="text-sm text-gray-2">
+              <li className="text-sm text-gray-200">
                 <Link as="#">
                   <FontAwesomeIcon icon={faXTwitter} />
                 </Link>
