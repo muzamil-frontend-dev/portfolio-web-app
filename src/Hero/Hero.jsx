@@ -1,11 +1,13 @@
 import React from "react";
 import "./Hero.css";
 import { TypeAnimation } from "react-type-animation";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
 const Hero = () => {
   return (
-    <div className="w-4/5 h-dvh relative image">
-      <div className="absolute w-full h-dvh bg-black opacity-80"></div>
+    <div className="sm:w-4/5 h-screen relative image">
+      <div className="absolute w-full h-screen bg-black opacity-80 py-24"></div>
       <div className="w-4/5 h-fit absolute inset-1/2 -translate-x-1/2 -translate-y-1/2">
         <div className="text-white text-center font-medium">
           <h1 className="text-2xl">Welcome</h1>
@@ -34,6 +36,12 @@ const Hero = () => {
             Hire Me
           </button>
         </div>
+      </div>
+      <div className="w-fit absolute animate inset-x-1/2 -translate-x-1/2">
+        <FontAwesomeIcon
+          icon={faChevronDown}
+          className="text-white font-bold text-xl"
+        />
       </div>
     </div>
   );

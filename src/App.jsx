@@ -4,7 +4,7 @@ import Hero from "./Hero/Hero";
 
 function App() {
   return (
-    <div className="flex">
+    <div className="sm:flex">
       <Header />
       <Hero />
     </div>
