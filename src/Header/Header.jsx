@@ -5,7 +5,6 @@ import {
   faLinkedinIn,
   faXTwitter,
 } from "@fortawesome/free-brands-svg-icons";
-import { Link } from "react-router-dom";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import classNames from "classnames";
 
@@ -26,7 +25,7 @@ const Header = () => {
     <header className="w-full sm:w-64">
       <nav className="hidden sm:block fixed w-64 h-full bg-black px-8 overflow-y-auto">
         {/* Profile Section */}
-        <Link as="/">
+        <a href="#home">
           <div className="w-40 h-40 mx-auto p-2 mt-8 mb-2 bg-gray-900 rounded-full">
             <img
               className="w-full h-full rounded-full"
@@ -35,54 +34,78 @@ const Header = () => {
             />
           </div>
           <h1 className="text-xl text-center text-white">Muzamil Hussain</h1>
-        </Link>
+        </a>
         <ul className="my-4">
           {menuItems.map((item, index) => (
             <li key={index} className="py-2 text-lg text-white text-center">
-              <Link to={item.url}>{item.name}</Link>
+              <a href={item.url}>{item.name}</a>
             </li>
           ))}
         </ul>
         <ul className="flex justify-center items-center mb-2">
           <li className="text-sm text-gray-200">
-            <Link as="#">
+            <a
+              href="https://www.linkedin.com/in/muzamil167/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <FontAwesomeIcon icon={faLinkedinIn} />
-            </Link>
+            </a>
           </li>
           <li className="text-sm text-gray-200 mx-6">
-            <Link as="#">
+            <a
+              href="https://github.com/muzamil-frontend-dev"
+              target="_blank"
+              rel="noreferrer"
+            >
               <FontAwesomeIcon icon={faGithub} />
-            </Link>
+            </a>
           </li>
           <li className="text-sm text-gray-200">
-            <Link as="#">
+            <a
+              href="https://www.hackerrank.com/profile/hmuzamil567"
+              target="_blank"
+              rel="noreferrer"
+            >
               <FontAwesomeIcon icon={faXTwitter} />
-            </Link>
+            </a>
           </li>
         </ul>
       </nav>
       {/* Mobile Nav Menu view */}
       <nav className="sticky top-0 bg-black sm:hidden">
         <section className="flex justify-between items-center py-2 px-4">
-          <Link to="/">
+          <a href="#home">
             <h1 className="text-xl text-white">Muzamil Hussain</h1>
-          </Link>
+          </a>
           <div>
             <ul className="inline-flex mr-6">
               <li className="text-sm text-gray-200">
-                <Link as="#">
+                <a
+                  href="https://www.linkedin.com/in/muzamil167/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <FontAwesomeIcon icon={faLinkedinIn} />
-                </Link>
+                </a>
               </li>
               <li className="text-sm text-gray-200 mx-3">
-                <Link as="#">
+                <a
+                  href="https://github.com/muzamil-frontend-dev"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <FontAwesomeIcon icon={faGithub} />
-                </Link>
+                </a>
               </li>
               <li className="text-sm text-gray-200">
-                <Link as="#">
+                <a
+                  href="https://www.hackerrank.com/profile/hmuzamil567"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <FontAwesomeIcon icon={faXTwitter} />
-                </Link>
+                </a>
               </li>
             </ul>
             <button
@@ -111,7 +134,7 @@ const Header = () => {
                 key={index}
                 className="py-2 px-4 text-md text-white border-b border-slate-100"
               >
-                <Link to={item.url}>{item.name}</Link>
+                <a href={item.url}>{item.name}</a>
               </li>
             ))}
           </ul>

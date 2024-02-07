@@ -1,12 +1,15 @@
-import { Routes, Route } from "react-router-dom";
 import Header from "./Header/Header";
-import Hero from "./Hero/Hero";
+import Hero from "./Sections/Hero/Hero";
+import About from "./Sections/About/About";
 
 function App() {
   return (
     <div className="sm:flex">
       <Header />
-      <Hero />
+      <div className="sm:w-4/5">
+        <Hero />
+        <About />
+      </div>
     </div>
   );
 }

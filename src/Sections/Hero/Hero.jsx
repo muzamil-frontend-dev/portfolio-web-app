@@ -6,7 +6,7 @@ import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
 const Hero = () => {
   return (
-    <div className="sm:w-4/5 h-screen relative image">
+    <div className="h-screen relative image" id="home">
       <div className="absolute w-full h-screen bg-black opacity-80 py-24"></div>
       <div className="w-4/5 h-fit absolute inset-1/2 -translate-x-1/2 -translate-y-1/2">
         <div className="text-white text-center font-medium">
