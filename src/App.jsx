@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="sm:flex">
       <Header />
-      <div className="sm:w-4/5">
+      <div className="basis-0 grow">
         <Hero />
         <About />
       </div>

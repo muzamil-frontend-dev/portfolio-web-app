@@ -8,10 +8,10 @@ const Hero = () => {
   return (
     <div className="h-screen relative bg-image bg-center" id="home">
       <div className="absolute w-full h-screen bg-black-100 opacity-80 py-24"></div>
-      <div className="w-4/5 h-fit absolute inset-1/2 -translate-x-1/2 -translate-y-1/2">
+      <div className="w-full h-fit absolute inset-1/2 -translate-x-1/2 -translate-y-1/2">
         <div className="text-white text-center font-medium">
           <h1 className="text-xl sm:text-2xl">Welcome</h1>
-          <p className="text-3xl sm:text-6xl my-4">
+          <p className="text-3xl md:text-4xl lg:text-6xl my-4">
             <TypeAnimation
               sequence={[
                 "I'm Muzamil Hussain",
