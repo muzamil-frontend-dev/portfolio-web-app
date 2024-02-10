@@ -4,18 +4,38 @@ module.exports = {
   theme: {
     colors: {
       white: "#ffffff",
-      black: "#111418",
-      "slate-50": "rgba(0, 0, 0, 0.95)",
-      "slate-100": "rgba(250, 250, 250, 0.15)",
+      black: {
+        100: "#111418",
+        200: "#212529",
+      },
+      slate: {
+        100: "rgba(0, 0, 0, 0.95)",
+        200: "rgba(250, 250, 250, 0.15)",
+        300: "rgba(255, 255, 255, 0.5)",
+        400: "rgba(250, 250, 250, 0.12)",
+      },
       gray: {
         100: "#dee3e4",
         200: "#aab1b8",
+        800: "#6c757d",
         900: "#343a40",
       },
       green: "#20c997",
     },
+    borderWidth: {
+      DEFAULT: "1px",
+      0: "0",
+      2: "2px",
+      3: "3px",
+    },
     extend: {
       poppins: ["Poppins", "sans-serif"],
+      lineHeight: {
+        "extra-loose": "3.5rem",
+      },
+      spacing: {
+        18: "4.5rem",
+      },
     },
   },
   plugins: [],
