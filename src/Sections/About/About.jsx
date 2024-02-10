@@ -4,7 +4,7 @@ import Heading from "../../Components/Heading/Heading";
 
 const About = () => {
   return (
-    <div className="bg-black-200 text-white py-18 px-5 sm:px-8" id="about">
+    <div className="bg-black-200 text-white py-18 px-3 sm:px-8" id="about">
       <Heading title="about me" tagLine="know me more" />
       <section className="lg:flex flex-row">
         <div className="lg:basis-auto lg:pr-8 text-center">
