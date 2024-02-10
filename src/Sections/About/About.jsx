@@ -1,4 +1,6 @@
 import React from "react";
+import CountUp from "react-countup";
+import VisibilitySensor from "react-visibility-sensor";
 import Heading from "../../Components/Heading/Heading";
 
 const About = () => {
@@ -55,25 +57,52 @@ const About = () => {
       <ul className="flex flex-row flex-wrap text-center mt-12">
         <li className="lg:border-r lg:border-slate-200 py-5 px-3 basis-1/2 lg:basis-1/4">
           <p className="text-2xl md:text-4xl lg:text-5xl font-medium leading-snug text-slate-300">
-            10+
+            <CountUp end={10} duration={2}>
+              {({ countUpRef, start }) => (
+                <VisibilitySensor onChange={start} delayCall>
+                  <span ref={countUpRef} />
+                </VisibilitySensor>
+              )}
+            </CountUp>
+            +
           </p>
           <span>Years Experience</span>
         </li>
         <li className="lg:border-r lg:border-slate-200 py-5 px-3 basis-1/2 lg:basis-1/4">
           <p className="text-2xl md:text-4xl lg:text-5xl font-medium leading-snug text-slate-300">
-            250+
+            <CountUp end={250} duration={2}>
+              {({ countUpRef, start }) => (
+                <VisibilitySensor onChange={start} delayCall>
+                  <span ref={countUpRef} />
+                </VisibilitySensor>
+              )}
+            </CountUp>
+            +
           </p>
           <span>Happy clients</span>
         </li>
         <li className="lg:border-r lg:border-slate-200 py-5 px-3 basis-1/2 lg:basis-1/4">
           <p className="text-2xl md:text-4xl lg:text-5xl font-medium leading-snug text-slate-300">
-            650+
+            <CountUp end={650} duration={2}>
+              {({ countUpRef, start }) => (
+                <VisibilitySensor onChange={start} delayCall>
+                  <span ref={countUpRef} />
+                </VisibilitySensor>
+              )}
+            </CountUp>
+            +
           </p>
           <span>projects Done</span>
         </li>
         <li className="py-5 px-3 basis-1/2 lg:basis-1/4">
           <p className="text-2xl md:text-4xl lg:text-5xl font-medium leading-snug text-slate-300">
-            38
+            <CountUp end={38} duration={2}>
+              {({ countUpRef, start }) => (
+                <VisibilitySensor onChange={start} delayCall>
+                  <span ref={countUpRef} />
+                </VisibilitySensor>
+              )}
+            </CountUp>
           </p>
           <span>Get Awards</span>
         </li>
