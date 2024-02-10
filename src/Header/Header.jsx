@@ -24,7 +24,7 @@ const Header = () => {
   return (
     <header className="w-full sm:w-64">
       {/* Desktop Nav Menu view */}
-      <nav className="hidden sm:block fixed w-64 h-full bg-black px-8 overflow-y-auto">
+      <nav className="hidden sm:block fixed w-64 h-full bg-black-100 px-8 overflow-y-auto">
         {/* Profile Section */}
         <a href="#home">
           <div className="w-40 h-40 mx-auto p-2 mt-8 mb-2 bg-gray-900 rounded-full">
@@ -74,10 +74,10 @@ const Header = () => {
         </ul>
       </nav>
       {/* Mobile Nav Menu view */}
-      <nav className="fixed top-0 left-0 w-full bg-black z-10 sm:hidden">
-        <section className="flex justify-between items-center py-3 pl-2 pr-4">
+      <nav className="fixed top-0 left-0 w-full bg-black-100 z-10 sm:hidden">
+        <section className="flex justify-between items-center py-4 px-4">
           <a href="#home">
-            <h1 className="text-2xl text-white">Muzamil Hussain</h1>
+            <h1 className="text-xl text-white">Muzamil Hussain</h1>
           </a>
           <div className="flex items-center">
             <ul className="inline-flex mr-5">
@@ -120,7 +120,7 @@ const Header = () => {
         {/* Toggle Menu */}
         <section
           className={classNames(
-            "absolute w-full h-48 bg-slate-50 overflow-y-auto transition-all duration-700 ease-in-out",
+            "absolute w-full h-48 bg-slate-100 overflow-y-auto transition-all duration-700 ease-in-out",
             {
               "invisible opacity-0": openMenu,
             },
@@ -133,7 +133,7 @@ const Header = () => {
             {menuItems.map((item, index) => (
               <li
                 key={index}
-                className="py-2 px-4 text-md text-white border-b border-slate-100"
+                className="py-2 px-4 text-white border-b border-slate-200"
               >
                 <a href={item.url}>{item.name}</a>
               </li>
