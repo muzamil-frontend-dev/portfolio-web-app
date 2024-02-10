@@ -5,8 +5,8 @@ const About = () => {
   return (
     <div className="bg-black-200 text-white py-18 px-5 sm:px-8" id="about">
       <Heading title="about me" tagLine="know me more" />
-      <section className="sm:flex flex-row">
-        <div className="sm:basis-auto sm:pr-8 text-center">
+      <section className="lg:flex flex-row">
+        <div className="lg:basis-auto lg:pr-8 text-center">
           <h1 className="text-3xl font-semibold mb-4">
             I'm <span className="text-green">Muzamil Hussain,</span> a Software
             Engineer
@@ -23,7 +23,7 @@ const About = () => {
             standard dummy text ever when an unknown printer took a galley.
           </p>
         </div>
-        <div className="sm:basis-auto mt-12 sm:mt-0">
+        <div className="lg:basis-auto mt-12 lg:mt-0">
           <ul className="mb-4">
             <li className="py-3 border-b border-slate-400">
               <span className="font-semibold">Name:</span>&nbsp;&nbsp;
@@ -53,26 +53,26 @@ const About = () => {
         </div>
       </section>
       <ul className="flex flex-row flex-wrap text-center mt-12">
-        <li className="sm:border-r sm:border-slate-200 py-5 px-3 basis-1/2 sm:basis-1/4">
-          <p className="text-xl sm:text-5xl font-medium leading-snug text-slate-300">
+        <li className="lg:border-r lg:border-slate-200 py-5 px-3 basis-1/2 lg:basis-1/4">
+          <p className="text-2xl md:text-4xl lg:text-5xl font-medium leading-snug text-slate-300">
             10+
           </p>
           <span>Years Experience</span>
         </li>
-        <li className="sm:border-r sm:border-slate-200 py-5 px-3 basis-1/2 sm:basis-1/4">
-          <p className="text-xl sm:text-5xl font-medium leading-snug text-slate-300">
+        <li className="lg:border-r lg:border-slate-200 py-5 px-3 basis-1/2 lg:basis-1/4">
+          <p className="text-2xl md:text-4xl lg:text-5xl font-medium leading-snug text-slate-300">
             250+
           </p>
           <span>Happy clients</span>
         </li>
-        <li className="sm:border-r sm:border-slate-200 py-5 px-3 basis-1/2 sm:basis-1/4">
-          <p className="text-xl sm:text-5xl font-medium leading-snug text-slate-300">
+        <li className="lg:border-r lg:border-slate-200 py-5 px-3 basis-1/2 lg:basis-1/4">
+          <p className="text-2xl md:text-4xl lg:text-5xl font-medium leading-snug text-slate-300">
             650+
           </p>
           <span>projects Done</span>
         </li>
-        <li className="py-5 px-3 basis-1/2 sm:basis-1/4">
-          <p className="text-xl sm:text-5xl font-medium leading-snug text-slate-300">
+        <li className="py-5 px-3 basis-1/2 lg:basis-1/4">
+          <p className="text-2xl md:text-4xl lg:text-5xl font-medium leading-snug text-slate-300">
             38
           </p>
           <span>Get Awards</span>
