@@ -6,12 +6,12 @@ import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
 const Hero = () => {
   return (
-    <div className="h-screen relative image" id="home">
+    <div className="h-screen relative bg-image bg-center" id="home">
       <div className="absolute w-full h-screen bg-black opacity-80 py-24"></div>
       <div className="w-4/5 h-fit absolute inset-1/2 -translate-x-1/2 -translate-y-1/2">
         <div className="text-white text-center font-medium">
-          <h1 className="text-2xl">Welcome</h1>
-          <p className="text-6xl my-4">
+          <h1 className="text-xl sm:text-2xl">Welcome</h1>
+          <p className="text-3xl sm:text-6xl my-4">
             <TypeAnimation
               sequence={[
                 "I'm Muzamil Hussain",
@@ -27,7 +27,7 @@ const Hero = () => {
               className="font-bold"
             />
           </p>
-          <span className="text-2xl text-gray-100">
+          <span className="text-xl sm:text-2xl text-gray-100">
             based in Lahore, Pakistan
           </span>
         </div>
@@ -37,12 +37,15 @@ const Hero = () => {
           </button>
         </div>
       </div>
-      <div className="w-fit absolute animate inset-x-1/2 -translate-x-1/2">
+      <a
+        href="#about"
+        className="w-fit h-20 absolute animate inset-x-1/2 -translate-x-1/2"
+      >
         <FontAwesomeIcon
           icon={faChevronDown}
           className="text-white font-bold text-xl"
         />
-      </div>
+      </a>
     </div>
   );
 };

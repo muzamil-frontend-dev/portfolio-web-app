@@ -1,4 +1,4 @@
-.image {
+.bg-image {
   background-image: url("/public/images/intro-bg.jpg");
   background-size: cover;
 }
@@ -10,11 +10,11 @@
 
 @keyframes fadeInDown {
   0% {
-    bottom: 30px;
+    bottom: 5px;
     opacity: 0;
   }
   100% {
-    bottom: 5px;
+    bottom: -50px;
     opacity: 1;
   }
 }

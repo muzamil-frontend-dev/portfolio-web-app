@@ -23,6 +23,7 @@ const Header = () => {
   ];
   return (
     <header className="w-full sm:w-64">
+      {/* Desktop Nav Menu view */}
       <nav className="hidden sm:block fixed w-64 h-full bg-black px-8 overflow-y-auto">
         {/* Profile Section */}
         <a href="#home">
@@ -73,13 +74,13 @@ const Header = () => {
         </ul>
       </nav>
       {/* Mobile Nav Menu view */}
-      <nav className="sticky top-0 bg-black sm:hidden">
-        <section className="flex justify-between items-center py-2 px-4">
+      <nav className="fixed top-0 left-0 w-full bg-black z-10 sm:hidden">
+        <section className="flex justify-between items-center py-3 pl-2 pr-4">
           <a href="#home">
-            <h1 className="text-xl text-white">Muzamil Hussain</h1>
+            <h1 className="text-2xl text-white">Muzamil Hussain</h1>
           </a>
-          <div>
-            <ul className="inline-flex mr-6">
+          <div className="flex items-center">
+            <ul className="inline-flex mr-5">
               <li className="text-sm text-gray-200">
                 <a
                   href="https://www.linkedin.com/in/muzamil167/"
@@ -89,7 +90,7 @@ const Header = () => {
                   <FontAwesomeIcon icon={faLinkedinIn} />
                 </a>
               </li>
-              <li className="text-sm text-gray-200 mx-3">
+              <li className="text-sm text-gray-200 mx-5">
                 <a
                   href="https://github.com/muzamil-frontend-dev"
                   target="_blank"
@@ -108,12 +109,12 @@ const Header = () => {
                 </a>
               </li>
             </ul>
-            <button
-              className="text-white"
+            <div
+              className="flex justify-center items-center w-7 h-7 text-white text-2xl"
               onClick={() => setOpenMenu((prev) => !prev)}
             >
               <FontAwesomeIcon icon={openMenu ? faBars : faXmark} />
-            </button>
+            </div>
           </div>
         </section>
         {/* Toggle Menu */}
