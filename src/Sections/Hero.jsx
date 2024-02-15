@@ -1,5 +1,5 @@
 import React from "react";
-import "./Hero.css";
+import "../App.css";
 import { TypeAnimation } from "react-type-animation";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";

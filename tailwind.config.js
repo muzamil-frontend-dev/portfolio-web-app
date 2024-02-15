@@ -21,6 +21,7 @@ module.exports = {
         900: "#343a40",
       },
       green: "#20c997",
+      red: "rgba(220, 53, 69, 1)",
     },
     borderWidth: {
       DEFAULT: "1px",

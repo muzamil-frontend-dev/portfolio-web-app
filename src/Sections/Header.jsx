@@ -16,7 +16,7 @@ const Header = () => {
     { name: "Home", url: "#home" },
     { name: "About Me", url: "#about" },
     { name: "What I Do", url: "#services" },
-    { name: "Resume", url: "#resume" },
+    { name: "Resume", url: "#summary" },
     { name: "Portfolio", url: "#portfolio" },
     { name: "Testimonial", url: "#testimonial" },
     { name: "Contact", url: "#contact" },
