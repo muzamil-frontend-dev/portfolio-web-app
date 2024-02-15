@@ -1,6 +1,6 @@
 import React from "react";
-import Heading from "../../Components/Heading/Heading";
-import ServiceBox from "../../Components/ServiceBox/ServiceBox";
+import Heading from "../Components/Heading";
+import ServiceBox from "../Components/ServiceBox";
 
 const servicesList = [
   {

@@ -1,6 +1,6 @@
 import React from "react";
 import CountUp from "react-countup";
-import Heading from "../../Components/Heading/Heading";
+import Heading from "../Components/Heading";
 
 const About = () => {
   return (
