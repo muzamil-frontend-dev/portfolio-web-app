@@ -38,7 +38,7 @@ const ServiceBox = ({ name, title, description }) => {
   }
 
   return (
-    <section className="flex sm:basis-1/2 mb-12 lg:px-4">
+    <section className="flex sm:basis-1/2 mb-12 px-4">
       <div className="flex justify-center item-center h-fit p-4 rounded bg-black-200 text-3xl text-green mr-4">
         {icon}
       </div>

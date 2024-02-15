@@ -22,9 +22,9 @@ const Header = () => {
     { name: "Contact", url: "#contact" },
   ];
   return (
-    <header className="w-full sm:w-64">
+    <header className="w-full lg:w-64">
       {/* Desktop Nav Menu view */}
-      <nav className="hidden sm:block fixed w-64 h-full bg-black-100 px-8 overflow-y-auto">
+      <nav className="hidden lg:block fixed w-64 h-full bg-black-100 px-8 overflow-y-auto">
         {/* Profile Section */}
         <a href="#home">
           <div className="w-40 h-40 mx-auto p-2 mt-8 mb-2 bg-gray-900 rounded-full">
@@ -73,8 +73,8 @@ const Header = () => {
           </li>
         </ul>
       </nav>
-      {/* Mobile Nav Menu view */}
-      <nav className="fixed top-0 left-0 w-full bg-black-100 z-10 sm:hidden">
+      {/* Tab/Mobile Nav Menu view */}
+      <nav className="fixed top-0 left-0 w-full bg-black-100 z-10 lg:hidden">
         <section className="flex justify-between items-center py-4 px-4">
           <a href="#home">
             <h1 className="text-xl text-white">Muzamil Hussain</h1>
@@ -120,7 +120,7 @@ const Header = () => {
         {/* Toggle Menu */}
         <section
           className={classNames(
-            "absolute w-full h-48 bg-slate-100 overflow-y-auto transition-all duration-700 ease-in-out",
+            "absolute w-full max-h-hvh bg-slate-100 overflow-y-auto transition-all duration-700 ease-in-out",
             {
               "invisible opacity-0": openMenu,
             },
