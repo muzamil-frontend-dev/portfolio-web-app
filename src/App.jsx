@@ -5,7 +5,7 @@ import Services from "./Sections/Services/Services";
 
 function App() {
   return (
-    <div className="sm:flex">
+    <div className="lg:flex">
       <Header />
       <div className="basis-0 grow">
         <Hero />
