@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import Heading from "../Components/Heading";
 import SummaryBox from "../Components/SummaryBox";
 import SkillBox from "../Components/SkillBox";
@@ -57,31 +57,32 @@ const experiences = [
 const skills = [
   {
     name: "web design",
-    progress: "65%",
+    progress: 65,
   },
   {
     name: "React JS",
-    progress: "70%",
+    progress: 70,
   },
   {
     name: "HTML/CSS",
-    progress: "95%",
+    progress: 95,
   },
   {
     name: "Angular JS",
-    progress: "60%",
+    progress: 60,
   },
   {
     name: "JavaScript",
-    progress: "80%",
+    progress: 80,
   },
   {
     name: "Bootstrap",
-    progress: "99%",
+    progress: 99,
   },
 ];
 
 const Summary = () => {
+  const targetElementRef = useRef(null);
   return (
     <section className="bg-black-200 text-white" id="summary">
       <div className="container mx-auto py-18 px-8">
@@ -113,12 +114,20 @@ const Summary = () => {
           </div>
         </section>
         <h1 className="text-2xl font-semibold mt-5 mb-6">My Skills</h1>
-        <section className="grid gap-x-12 gap-y-4 grid-cols-1 sm:grid-cols-2 gap-4">
-          {skills.map((item) => (
-            <SkillBox name={item.name} progress={item.progress} />
+        <section
+          ref={targetElementRef}
+          className="grid gap-x-12 gap-y-4 grid-cols-1 sm:grid-cols-2 gap-4"
+        >
+          {skills.map((item, i) => (
+            <SkillBox
+              key={i}
+              name={item.name}
+              value={item.progress}
+              targetElement={targetElementRef}
+            />
           ))}
         </section>
-        <div className="mt-14 text-center">
+        <div className="mt-18 text-center">
           <Button className="text-gray-800 border-2 border-gray-800 hover:bg-gray-800 hover:text-white">
             <a href="https://">Download CV</a>
             <FontAwesomeIcon icon={faDownload} className="ml-2" />
