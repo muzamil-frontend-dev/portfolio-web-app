@@ -47,7 +47,7 @@ const About = () => {
                 <span>Lahore, Pakistan</span>
               </li>
             </ul>
-            <Button color={"green"} paddingY={"3"} paddingX={"10"}>
+            <Button color="green">
               <a href="https://">Download CV</a>
             </Button>
           </div>
