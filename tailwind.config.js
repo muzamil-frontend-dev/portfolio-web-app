@@ -20,7 +20,9 @@ module.exports = {
         800: "#6c757d",
         900: "#343a40",
       },
+      blue: "#111418",
       green: "#20c997",
+      darkGreen: "#1baa80",
       red: "rgba(220, 53, 69, 1)",
     },
     borderWidth: {
