@@ -52,11 +52,8 @@ const experiencenData = [
 
 const Summary = () => {
   return (
-    <section
-      className="bg-black-200 text-white pt-18 px-8 lg:px-8"
-      id="summary"
-    >
-      <div className="container mx-auto">
+    <section className="bg-black-200 text-white" id="summary">
+      <div className="container mx-auto pt-18 px-8">
         <Heading title="summary" tagLine="resume" />
         <section className="grid gap-x-12 gap-y-4 grid-cols-1 sm:grid-cols-2">
           <div className="">
