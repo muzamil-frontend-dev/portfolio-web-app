@@ -119,7 +119,7 @@ const Summary = () => {
           ))}
         </section>
         <div className="mt-14 text-center">
-          <Button color="gray-800" outline={2}>
+          <Button className="text-gray-800 border-2 border-gray-800 hover:bg-gray-800 hover:text-white">
             <a href="https://">Download CV</a>
             <FontAwesomeIcon icon={faDownload} className="ml-2" />
           </Button>
