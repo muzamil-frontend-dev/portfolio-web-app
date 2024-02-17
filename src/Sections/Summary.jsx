@@ -1,8 +1,12 @@
 import React from "react";
 import Heading from "../Components/Heading";
 import SummaryBox from "../Components/SummaryBox";
+import SkillBox from "../Components/SkillBox";
+import Button from "../Components/Button";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faDownload } from "@fortawesome/free-solid-svg-icons";
 
-const educationData = [
+const educations = [
   {
     name: "computer science",
     institute: "international university",
@@ -26,7 +30,7 @@ const educationData = [
   },
 ];
 
-const experiencenData = [
+const experiences = [
   {
     name: "Jr. UI UX Designer",
     institute: "Themeforest",
@@ -50,15 +54,42 @@ const experiencenData = [
   },
 ];
 
+const skills = [
+  {
+    name: "web design",
+    progress: "65%",
+  },
+  {
+    name: "React JS",
+    progress: "70%",
+  },
+  {
+    name: "HTML/CSS",
+    progress: "95%",
+  },
+  {
+    name: "Angular JS",
+    progress: "60%",
+  },
+  {
+    name: "JavaScript",
+    progress: "80%",
+  },
+  {
+    name: "Bootstrap",
+    progress: "99%",
+  },
+];
+
 const Summary = () => {
   return (
     <section className="bg-black-200 text-white" id="summary">
-      <div className="container mx-auto pt-18 px-8">
+      <div className="container mx-auto py-18 px-8">
         <Heading title="summary" tagLine="resume" />
         <section className="grid gap-x-12 gap-y-4 grid-cols-1 sm:grid-cols-2">
-          <div className="">
+          <div>
             <h1 className="text-2xl font-semibold mb-5">My Education</h1>
-            {educationData.map((item, i) => (
+            {educations.map((item, i) => (
               <SummaryBox
                 key={i}
                 name={item.name}
@@ -68,9 +99,9 @@ const Summary = () => {
               />
             ))}
           </div>
-          <div className="">
+          <div>
             <h1 className="text-2xl font-semibold mb-5">My Experience</h1>
-            {experiencenData.map((item, i) => (
+            {experiences.map((item, i) => (
               <SummaryBox
                 key={i}
                 name={item.name}
@@ -81,6 +112,24 @@ const Summary = () => {
             ))}
           </div>
         </section>
+        <h1 className="text-2xl font-semibold mt-5 mb-6">My Skills</h1>
+        <section className="grid gap-x-12 gap-y-4 grid-cols-1 sm:grid-cols-2 gap-4">
+          {skills.map((item) => (
+            <SkillBox name={item.name} progress={item.progress} />
+          ))}
+        </section>
+        <div className="mt-14 text-center">
+          <Button
+            color={"gray-800"}
+            paddingY={"3"}
+            paddingX={"10"}
+            outline={2}
+            hover
+          >
+            <a href="https://">Download CV</a>
+            <FontAwesomeIcon icon={faDownload} className="ml-2" />
+          </Button>
+        </div>
       </div>
     </section>
   );

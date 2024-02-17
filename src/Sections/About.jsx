@@ -1,6 +1,7 @@
 import React from "react";
 import CountUp from "react-countup";
 import Heading from "../Components/Heading";
+import Button from "../Components/Button";
 
 const About = () => {
   return (
@@ -46,12 +47,9 @@ const About = () => {
                 <span>Lahore, Pakistan</span>
               </li>
             </ul>
-            <a
-              href="https://"
-              className="bg-green rounded-full py-3 px-10 text-sm font-medium"
-            >
-              Download CV
-            </a>
+            <Button color={"green"} paddingY={"3"} paddingX={"10"}>
+              <a href="https://">Download CV</a>
+            </Button>
           </div>
         </section>
         <ul className="flex flex-row flex-wrap text-center mt-12">
