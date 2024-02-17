@@ -31,6 +31,14 @@ module.exports = {
     },
     extend: {
       poppins: ["Poppins", "sans-serif"],
+      fontSize: {
+        "2.5xl": [
+          "1.75rem",
+          {
+            lineHeight: "2.125rem",
+          },
+        ],
+      },
       lineHeight: {
         "extra-loose": "3.5rem",
       },
