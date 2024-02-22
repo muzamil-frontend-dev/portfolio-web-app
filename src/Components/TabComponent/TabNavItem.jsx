@@ -2,36 +2,37 @@ import React from "react";
 import classNames from "classnames";
 
 const TabNavItem = ({
-  id,
-  title,
+  data,
   activeTab,
   setActiveTab,
   showAllTabs,
   setShowAllTabs,
 }) => {
-  const handleClick = () => {
-    setActiveTab(id);
-    setShowAllTabs(false);
+  const handleClick = (tab) => {
+    if (tab.name === "all") {
+      setShowAllTabs(true);
+      setActiveTab(tab.id);
+    } else {
+      setShowAllTabs(false);
+      setActiveTab(tab.id);
+    }
   };
 
   return (
-    <>
-      {title === "all" ? (
+    <ul className="text-center">
+      {data.map((tab) => (
         <li
-          className={classNames("", { active: showAllTabs })}
-          onClick={() => setShowAllTabs(true)}
+          key={tab.id}
+          className={classNames("inline capitalize py-2 px-4 cursor-pointer", {
+            "text-white-100": activeTab !== tab.id,
+            "text-green border-b-2 border-b-green": activeTab === tab.id,
+          })}
+          onClick={() => handleClick(tab)}
         >
-          {title}
+          {tab.name}
         </li>
-      ) : (
-        <li
-          className={classNames("", { active: activeTab === id })}
-          onClick={handleClick}
-        >
-          {title}
-        </li>
-      )}
-    </>
+      ))}
+    </ul>
   );
 };
 

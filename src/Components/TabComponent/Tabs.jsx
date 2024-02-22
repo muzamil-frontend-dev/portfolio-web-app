@@ -41,27 +41,21 @@ const tabContent = [
 const Tabs = () => {
   const [activeTab, setActiveTab] = useState(tabs[0]?.id);
   const [showAllTabs, setShowAllTabs] = useState(true);
-  console.log("showAllTabs: ", showAllTabs);
 
   return (
     <section>
-      <ul>
-        {tabs.map((tab) => (
-          <TabNavItem
-            key={tab.id}
-            id={tab.id}
-            title={tab.name}
-            activeTab={activeTab}
-            setActiveTab={setActiveTab}
-            showAllTabs={showAllTabs}
-            setShowAllTabs={setShowAllTabs}
-          />
-        ))}
-      </ul>
+      <TabNavItem
+        data={tabs}
+        activeTab={activeTab}
+        setActiveTab={setActiveTab}
+        showAllTabs={showAllTabs}
+        setShowAllTabs={setShowAllTabs}
+      />
       {/* Outlet */}
       <div>
         {tabContent.map((tab) => (
           <TabContent
+            key={tab.id}
             activeTab={activeTab}
             showAllTabs={showAllTabs}
             id={tab.id}
