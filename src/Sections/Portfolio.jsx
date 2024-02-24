@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import Heading from "../Components/Heading";
 import classNames from "classnames";
 import { wrapGrid } from "animate-css-grid";
-import PortfolioCard from "../Components/PortfolioCard";
+import PortfolioCard from "../Components/PortfolioComponent/Card";
 
 const portfolioTabs = ["all", "design", "brands", "photos"];
 const portfolioArr = [

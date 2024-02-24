@@ -54,6 +54,9 @@ module.exports = {
       maxHeight: {
         hvh: "65vh",
       },
+      backdropBlur: {
+        xs: "2px",
+      },
     },
   },
   plugins: [],
