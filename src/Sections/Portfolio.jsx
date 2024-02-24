@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import Heading from "../Components/Heading";
 import classNames from "classnames";
 import { wrapGrid } from "animate-css-grid";
+import PortfolioCard from "../Components/PortfolioCard";
 
 const portfolioTabs = ["all", "design", "brands", "photos"];
 const portfolioArr = [
@@ -92,13 +93,7 @@ const Portfolio = () => {
           ref={ref}
         >
           {filterProducts.map((product, i) => (
-            <div key={i} className="h-min w-full bg-red-400 rounded-md">
-              <img
-                className="object-cover rounded-md"
-                src={product.img}
-                alt="img 1"
-              />
-            </div>
+            <PortfolioCard key={i} image={product.img} />
           ))}
         </div>
       </div>
