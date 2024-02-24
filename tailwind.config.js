@@ -12,6 +12,7 @@ module.exports = {
         200: "#212529",
       },
       slate: {
+        DEFAULT: "rgba(0, 0, 0, 0.7)",
         100: "rgba(0, 0, 0, 0.95)",
         200: "rgba(250, 250, 250, 0.15)",
         300: "rgba(255, 255, 255, 0.5)",
@@ -52,6 +53,9 @@ module.exports = {
       },
       maxHeight: {
         hvh: "65vh",
+      },
+      backdropBlur: {
+        xs: "2px",
       },
     },
   },
