@@ -1,6 +1,7 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Heading from "../Components/Heading";
 import classNames from "classnames";
+import { wrapGrid } from "animate-css-grid";
 
 const portfolioTabs = ["all", "design", "brands", "photos"];
 const portfolioArr = [
@@ -9,8 +10,16 @@ const portfolioArr = [
     img: "/images/portfolio/1.jpg",
   },
   {
+    name: "design",
+    img: "/images/portfolio/3.jpg",
+  },
+  {
     name: "brands",
     img: "/images/portfolio/2.jpg",
+  },
+  {
+    name: "brands",
+    img: "/images/portfolio/4.jpg",
   },
   {
     name: "photos",
@@ -37,7 +46,15 @@ const portfolioArr = [
 const Portfolio = () => {
   const ref = useRef(null);
   const [filterProducts, setFilterProducts] = useState(portfolioArr);
-  const [active, setActive] = useState(null);
+  const [active, setActive] = useState(0);
+
+  useEffect(() => {
+    wrapGrid(ref?.current, {
+      stagger: 100,
+      duration: 500,
+      easing: "linear",
+    });
+  }, []);
 
   const handleClick = (e, index) => {
     setActive(index);
@@ -53,7 +70,7 @@ const Portfolio = () => {
       <div className="contianer mx-auto py-18 px-8">
         <Heading title="portfolio" tagLine="my work" />
         {/* Grid changing buttons */}
-        <ul className="text-center">
+        <ul className="text-center mb-12">
           {portfolioTabs.map((tab, index) => (
             <li
               key={index}
@@ -71,12 +88,16 @@ const Portfolio = () => {
         </ul>
         {/* Portfolio Grid */}
         <div
-          className="columns-1 md:columns-2 lg:columns-3 gap-4 space-y-4 p-8"
+          className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6 px-4 transition"
           ref={ref}
         >
           {filterProducts.map((product, i) => (
-            <div key={i} className="h-min w-full bg-red-400">
-              <img className="object-cover" src={product.img} alt="img 1" />
+            <div key={i} className="h-min w-full bg-red-400 rounded-md">
+              <img
+                className="object-cover rounded-md"
+                src={product.img}
+                alt="img 1"
+              />
             </div>
           ))}
         </div>
