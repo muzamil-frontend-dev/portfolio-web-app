@@ -1,6 +1,8 @@
 import React, { useRef, useState } from "react";
 import Heading from "../Components/Heading";
+import classNames from "classnames";
 
+const portfolioTabs = ["all", "design", "brands", "photos"];
 const portfolioArr = [
   {
     name: "design",
@@ -35,8 +37,10 @@ const portfolioArr = [
 const Portfolio = () => {
   const ref = useRef(null);
   const [filterProducts, setFilterProducts] = useState(portfolioArr);
+  const [active, setActive] = useState(null);
 
-  const handleClick = (e) => {
+  const handleClick = (e, index) => {
+    setActive(index);
     const text = e.target.textContent.toLowerCase();
     const filterData = portfolioArr.filter((product) => product.name === text);
     filterData.length !== 0
@@ -48,15 +52,22 @@ const Portfolio = () => {
     <section className="bg-gray-900 text-white" id="portfolio">
       <div className="contianer mx-auto py-18 px-8">
         <Heading title="portfolio" tagLine="my work" />
-        {/* <Tabs /> */}
         {/* Grid changing buttons */}
-        <ul className="text-center" onClick={handleClick}>
-          <li className="inline text-green py-2 px-4 border-b-2 border-b-green">
-            All
-          </li>
-          <li className="inline text-white-100 py-2 px-4">Design</li>
-          <li className="inline text-white-100 py-2 px-4">Brands</li>
-          <li className="inline text-white-100 py-2 px-4">Photos</li>
+        <ul className="text-center">
+          {portfolioTabs.map((tab, index) => (
+            <li
+              key={index}
+              className={classNames(
+                "inline-block cursor-pointer capitalize hover:text-green py-2 px-4 transition",
+                {
+                  "text-green border-b-2 border-b-green": active === index,
+                }
+              )}
+              onClick={(event) => handleClick(event, index)}
+            >
+              {tab}
+            </li>
+          ))}
         </ul>
         {/* Portfolio Grid */}
         <div
