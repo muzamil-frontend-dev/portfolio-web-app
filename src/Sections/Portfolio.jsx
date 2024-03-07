@@ -68,7 +68,7 @@ const Portfolio = () => {
 
   return (
     <section className="bg-gray-900 text-white" id="portfolio">
-      <div className="contianer mx-auto py-18 px-8">
+      <div className="container mx-auto py-18 px-8">
         <Heading title="portfolio" tagLine="my work" />
         {/* Grid changing buttons */}
         <ul className="text-center mb-12">
@@ -88,14 +88,14 @@ const Portfolio = () => {
           ))}
         </ul>
         {/* Portfolio Grid */}
-        <div
+        <ul
           className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6 px-4 transition"
           ref={ref}
         >
           {filterProducts.map((product, i) => (
             <PortfolioCard key={i} image={product.img} />
           ))}
-        </div>
+        </ul>
       </div>
     </section>
   );
