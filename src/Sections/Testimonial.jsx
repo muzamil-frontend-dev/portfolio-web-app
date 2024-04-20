@@ -1,5 +1,6 @@
 import React from "react";
 import Heading from "../Components/Heading";
+import TestimonialCarousel from "../Components/TestimonialCarousel";
 
 const Testimonial = () => {
   return (
@@ -7,7 +8,9 @@ const Testimonial = () => {
       <div className="container mx-auto py-18 px-8">
         <Heading title={"testimonial"} tagLine={"Client Speak"} />
         {/* Testimonials Slider */}
-        <section></section>
+        <section>
+          <TestimonialCarousel />
+        </section>
       </div>
     </section>
   );
