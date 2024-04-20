@@ -38,6 +38,7 @@ module.exports = {
       green: "#20c997",
       darkGreen: "#1baa80",
       red: "rgba(220, 53, 69, 1)",
+      yellow: "rgba(255, 139, 7, 1)",
     },
     borderWidth: {
       DEFAULT: "1px",
