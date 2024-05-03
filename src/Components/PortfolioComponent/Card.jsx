@@ -44,8 +44,8 @@ const Card = ({ image }) => {
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={handleCloseModal}
-        className="absolute inset-10 h-max h bg-black-200 p-7 container mx-auto"
-        overlayClassName="fixed inset-0 bg-slate overflow-y-scroll"
+        className="relative container p-7 bg-black-200"
+        overlayClassName="fixed inset-x-10 top-10 bottom-0 bg-slate overflow-y-scroll"
         ariaHideApp={false}
       >
         <button

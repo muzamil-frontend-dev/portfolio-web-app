@@ -8,7 +8,7 @@ const clientsData = [
     name: "Jay Shah",
     tagLine: "Founder at Icomatic Pvt Ltd",
     description:
-      "Easy to use, reasonably priced simply dummy text of the printing and typesetting industry. Quidam lisque persius interesset his et, in quot quidam possim iriure.",
+      "“I have used them twice now. Good rates, very efficient service and priced simply dummy text of the printing and typesetting industry quidam interesset his et. Excellent.”",
   },
   {
     imageURL: "/images/clients/1.jpg",
@@ -33,27 +33,38 @@ const clientsData = [
   },
 ];
 
+const responsiveLayout = {
+  0: {
+    items: 1,
+  },
+  992: {
+    items: 2,
+  },
+};
+
 const TestimonialCarousel = () => {
   return (
-    <OwlCarousel className="owl-theme" loop margin={40} items={2}>
+    <OwlCarousel
+      className="owl-theme"
+      loop
+      margin={40}
+      items={2}
+      responsive={responsiveLayout}
+    >
       {clientsData.map((item) => (
         <div className="item bg-black-100 p-12 rounded-md">
           <div className="flex items-center mb-6">
             <img
-              src="/images/clients/1.jpg"
+              src={item.imageURL}
               alt="Client Pic"
               className="rounded-full !w-auto"
             />
             <div className="ml-4">
-              <p>Jay Shah</p>
-              <span>Founder at Icomatic Pvt Ltd </span>
+              <p className="font-semibold">{item.name}</p>
+              <span className="font-medium text-slate-300">{item.tagLine}</span>
             </div>
           </div>
-          <p className="mb-6">
-            "Easy to use, reasonably priced simply dummy text of the printing
-            and typesetting industry. Quidam lisque persius interesset his et,
-            in quot quidam possim iriure.”
-          </p>
+          <p className="mb-6">{item.description}</p>
           <Rating />
         </div>
       ))}
