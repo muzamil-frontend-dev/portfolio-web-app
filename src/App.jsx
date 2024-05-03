@@ -8,9 +8,11 @@ import Testimonial from "./Sections/Testimonial";
 
 function App() {
   return (
-    <div className="lg:flex">
-      <Header />
-      <div className="basis-0 grow">
+    <div className="grid grid-cols-1 lg:grid-cols-5">
+      <div className="lg:col-span-1">
+        <Header />
+      </div>
+      <div className="lg:col-span-4">
         <Hero />
         <About />
         <Services />
