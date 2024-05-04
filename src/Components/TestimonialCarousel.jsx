@@ -47,7 +47,7 @@ const TestimonialCarousel = () => {
     <OwlCarousel
       className="owl-theme"
       loop
-      margin={40}
+      margin={30}
       items={2}
       responsive={responsiveLayout}
     >
