@@ -14,8 +14,8 @@ const Contact = () => {
     <section className="bg-gray-900 text-white" id="contact-us">
       <div className="container mx-auto py-18 px-8">
         <Heading title="contact" tagLine="get in touch" />
-        <section className="grid grid-cols-1 gap-y-12 md:grid-cols-5 xl:gap-x-4">
-          <article className="hidden md:block col-span-2 xl:col-span-1">
+        <section className="grid grid-cols-1 gap-y-12 md:grid-cols-6 xl:gap-x-0">
+          <article className="hidden md:block col-span-2 md:col-span-2">
             <h2 className="text-xl font-medium uppercase mb-4">Address</h2>
             <p className="text-gray-100 mb-6">
               4th Floor, Plot No.22,
@@ -70,23 +70,23 @@ const Contact = () => {
               </a>
             </div>
           </article>
-          <article className="col-span-3 xl:col-span-4">
+          <article className="col-span-3 md:col-span-4">
             <h2 className="text-xl font-medium uppercase mb-4">
               Send us a note
             </h2>
             <form className="grid grid-cols-2 gap-6">
               <input
                 placeholder="Name"
-                className="col-span-2 md:col-span-1 text-white p-3.5 bg-black-400 border rounded-md border-black-400 placeholder:text-white-200 focus:outline-none focus:ring-1 focus:ring-blue-200"
+                className="col-span-2 md:col-span-1 text-white p-3 bg-black-400 border rounded-md border-black-400 placeholder:text-white-200 focus:outline-none focus:ring-1 focus:ring-blue-200"
               />
               <input
                 placeholder="Email"
-                className="col-span-2 md:col-span-1 text-white p-3.5 bg-black-400 border rounded-md border-black-400 placeholder:text-white-200 focus:outline-none focus:ring-1 focus:ring-blue-200"
+                className="col-span-2 md:col-span-1 text-white p-3 bg-black-400 border rounded-md border-black-400 placeholder:text-white-200 focus:outline-none focus:ring-1 focus:ring-blue-200"
               />
               <textarea
                 placeholder="Tell us more about your needs......"
                 rows={5}
-                className="col-span-2 text-white p-3.5 bg-black-400 border rounded-md border-black-400 placeholder:text-white-200 focus:outline-none focus:ring-1 focus:ring-blue-200"
+                className="col-span-2 text-white p-3 bg-black-400 border rounded-md border-black-400 placeholder:text-white-200 focus:outline-none focus:ring-1 focus:ring-blue-200"
               />
               <p className="col-span-2 text-center mt-0 mb-0">
                 <button
