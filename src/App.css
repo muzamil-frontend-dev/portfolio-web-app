@@ -1,3 +1,16 @@
+::-moz-selection {
+  /* Code for Firefox */
+  font-weight: 500;
+  color: #ffffff;
+  background: #20c997;
+}
+
+::selection {
+  font-weight: 500;
+  color: #ffffff;
+  background: #20c997;
+}
+
 /* Hero Section Styling */
 .bg-image {
   background-image: url("/public/images/intro-bg.jpg");

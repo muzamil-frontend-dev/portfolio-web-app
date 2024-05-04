@@ -19,7 +19,7 @@ const Header = () => {
     { name: "Resume", url: "#summary" },
     { name: "Portfolio", url: "#portfolio" },
     { name: "Testimonial", url: "#testimonial" },
-    { name: "Contact", url: "#contact" },
+    { name: "Contact", url: "#contact-us" },
   ];
   return (
     <header className="w-full lg:w-64">
