@@ -51,8 +51,8 @@ const TestimonialCarousel = () => {
       items={2}
       responsive={responsiveLayout}
     >
-      {clientsData.map((item) => (
-        <div className="item bg-black-100 p-12 rounded-md">
+      {clientsData.map((item, i) => (
+        <div className="item bg-black-100 p-12 rounded-md" key={i}>
           <div className="flex items-center mb-6">
             <img
               src={item.imageURL}
