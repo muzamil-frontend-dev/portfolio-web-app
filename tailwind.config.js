@@ -16,10 +16,14 @@ module.exports = {
       white: {
         DEFAULT: "#ffffff",
         100: "#ddd",
+        200: "#777b7f",
       },
       black: {
+        DEFAULT: "#000000",
         100: "#111418",
         200: "#212529",
+        300: "#333333",
+        400: "#232a31",
       },
       slate: {
         DEFAULT: "rgba(0, 0, 0, 0.7)",
@@ -34,9 +38,15 @@ module.exports = {
         800: "#6c757d",
         900: "#343a40",
       },
-      blue: "#111418",
-      green: "#20c997",
-      darkGreen: "#1baa80",
+      blue: {
+        DEFAULT: "#111418",
+        100: "#0077B5",
+        200: "#80bdff",
+      },
+      green: {
+        DEFAULT: "#20c997",
+        100: "#1baa80",
+      },
       red: "rgba(220, 53, 69, 1)",
       yellow: "rgba(255, 139, 7, 1)",
     },

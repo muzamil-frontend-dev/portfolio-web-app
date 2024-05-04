@@ -5,6 +5,7 @@ import Services from "./Sections/Services";
 import Summary from "./Sections/Summary";
 import Portfolio from "./Sections/Portfolio";
 import Testimonial from "./Sections/Testimonial";
+import Contact from "./Sections/Contact";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Summary />
         <Portfolio />
         <Testimonial />
+        <Contact />
       </div>
     </div>
   );
