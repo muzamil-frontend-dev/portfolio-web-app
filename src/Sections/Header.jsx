@@ -22,7 +22,7 @@ const Header = () => {
     { name: "Contact", url: "#contact-us" },
   ];
   return (
-    <header className="w-full lg:w-64">
+    <header className="lg:w-64">
       {/* Desktop Nav Menu view */}
       <nav className="hidden lg:block fixed w-64 h-full bg-black-100 px-8 overflow-y-auto">
         {/* Profile Section */}

@@ -4,13 +4,6 @@ module.exports = {
   theme: {
     container: {
       padding: "3rem",
-      screens: {
-        sm: "576",
-        md: "768",
-        lg: "992",
-        xl: "1200",
-        "2xl": "1320px",
-      },
     },
     colors: {
       white: {

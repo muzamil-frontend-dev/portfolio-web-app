@@ -11,6 +11,16 @@
   background: #20c997;
 }
 
+.parent-class {
+  width: calc(100% - 16rem);
+}
+
+@media only screen and (max-width: 1024px) {
+  .parent-class {
+    width: 100%;
+  }
+}
+
 /* Hero Section Styling */
 .bg-image {
   background-image: url("/public/images/intro-bg.jpg");

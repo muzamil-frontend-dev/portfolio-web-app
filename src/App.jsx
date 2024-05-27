@@ -10,11 +10,9 @@ import Footer from "./Sections/Footer";
 
 function App() {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-5">
-      <div className="lg:col-span-1">
-        <Header />
-      </div>
-      <div className="lg:col-span-4">
+    <div className="flex">
+      <Header />
+      <div className="parent-class">
         <Hero />
         <About />
         <Services />
