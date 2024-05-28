@@ -3,10 +3,13 @@ import React from "react";
 const Heading = ({ title, tagLine }) => {
   return (
     <section className="relative text-center mb-12">
-      <h1 className="uppercase text-5xl sm:text-6xl lg:text-8xl xl:text-9xl font-semibold text-slate-300 tracking-wider opacity-10">
+      <h1 className="uppercase text-4xl xs:text-5xl sm:text-7xl xl:text-9xl font-semibold text-slate-300 tracking-wider opacity-10">
         {title}
       </h1>
-      <p className="w-full h-fit absolute inset-1/2 -translate-x-1/2 -translate-y-1/2 capitalize text-4xl font-semibold leading-extra-loose">
+      <p
+        className="w-full h-fit absolute inset-1/2 -translate-x-1/2 -translate-y-1/2 capitalize 
+          text-lg xs:text-xl sm:text-2xl lg:text-4xl font-semibold leading-extra-loose"
+      >
         {tagLine}
         <span className="block w-20 mx-auto border-b-3 border-green"></span>
       </p>

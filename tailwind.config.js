@@ -73,6 +73,9 @@ module.exports = {
       blur: {
         xs: "2px",
       },
+      screens: {
+        xs: "425px",
+      },
     },
   },
   plugins: [],
