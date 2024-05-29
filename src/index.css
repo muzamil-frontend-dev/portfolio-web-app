@@ -8,6 +8,10 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 1vw;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   -webkit-font-smoothing: antialiased;

@@ -52,7 +52,6 @@ module.exports = {
       3: "3px",
     },
     extend: {
-      poppins: ["Poppins", "sans-serif"],
       fontSize: {
         "2.5xl": [
           "1.75rem",
