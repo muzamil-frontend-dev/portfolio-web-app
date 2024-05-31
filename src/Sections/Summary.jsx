@@ -8,23 +8,24 @@ import { faDownload } from "@fortawesome/free-solid-svg-icons";
 
 const educations = [
   {
-    name: "computer science",
-    institute: "international university",
-    tenure: "2000 - 2004",
+    name: "MERN Stack Development",
+    institute: "EVS Professional Training Institute",
+    tenure: "Oct 2022",
     description:
-      "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
+      // "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
+      "In this course, I gained skills for my JavaScript development career by building database-driven applications.",
+  },
+  {
+    name: "Mastering React",
+    institute: "Code With Mosh",
+    tenure: "Aug 2021",
+    description:
+      "Learn React basics and core concepts by building dynamic user interfaces and interactive applications.",
   },
   {
     name: "Bachelor Degree",
-    institute: "University of California",
-    tenure: "2005 - 2008",
-    description:
-      "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
-  },
-  {
-    name: "Master Degree",
-    institute: "Harvard University",
-    tenure: "2009 - 2012",
+    institute: "University of South Asia",
+    tenure: "2015 - 2020",
     description:
       "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
   },
@@ -32,23 +33,23 @@ const educations = [
 
 const experiences = [
   {
-    name: "Jr. UI UX Designer",
-    institute: "Themeforest",
-    tenure: "2012 - 2013",
+    name: "React.js Engineer",
+    institute: "Starzplay Arabia",
+    tenure: "2022 - Present",
     description:
       "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
   },
   {
-    name: "Jr. Product Designer",
-    institute: "Dribbble",
-    tenure: "2014 - 2016",
+    name: "Front End Developer",
+    institute: "Approcx",
+    tenure: "May 2022 - Nov 2022",
     description:
       "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
   },
   {
-    name: "Product Designer",
-    institute: "Adobe",
-    tenure: "2017 - 2019",
+    name: "Jr. Front End Developer",
+    institute: "Magnic Digital Pvt Ltd",
+    tenure: "2020 - 2022",
     description:
       "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
   },
@@ -56,28 +57,36 @@ const experiences = [
 
 const skills = [
   {
-    name: "web design",
-    progress: 65,
-  },
-  {
-    name: "React JS",
-    progress: 70,
-  },
-  {
-    name: "HTML/CSS",
-    progress: 95,
-  },
-  {
-    name: "Angular JS",
-    progress: 60,
-  },
-  {
     name: "JavaScript",
     progress: 80,
   },
   {
-    name: "Bootstrap",
-    progress: 99,
+    name: "TypeScript",
+    progress: 50,
+  },
+  {
+    name: "React JS",
+    progress: 90,
+  },
+  {
+    name: "Redux",
+    progress: 90,
+  },
+  {
+    name: "Node JS",
+    progress: 70,
+  },
+  {
+    name: "Next JS",
+    progress: 60,
+  },
+  {
+    name: "Material UI",
+    progress: 60,
+  },
+  {
+    name: "Tailwind CSS",
+    progress: 80,
   },
 ];
 
