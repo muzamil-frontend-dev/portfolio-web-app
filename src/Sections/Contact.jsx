@@ -18,9 +18,7 @@ const Contact = () => {
           <article className="hidden md:block col-span-2 md:col-span-2">
             <h2 className="text-xl font-medium uppercase mb-4">Address</h2>
             <p className="text-gray-100 mb-6">
-              4th Floor, Plot No.22,
-              <br /> 145 Murphy Canyon Rd.
-              <br /> San Diego CA 2028
+              Sehar Road Baghbanpura <br /> Lahore, Pakistan
             </p>
             <div className="inline-block text-gray-100 mb-4">
               <p className="mb-1">
@@ -28,27 +26,23 @@ const Contact = () => {
                   icon={faPhoneAlt}
                   className="text-green me-2"
                 />
-                (060) 444 434 444
-              </p>
-              <p className="mb-1">
-                <FontAwesomeIcon icon={faFax} className="text-green me-2" />
-                (060) 555 545 555
+                (+92) 320 9482112
               </p>
               <p>
                 <FontAwesomeIcon
                   icon={faEnvelope}
                   className="text-green me-2"
                 />
-                chat@simone.com
+                hmuzamil567@gmail.com
               </p>
             </div>
             <h2 className="text-xl font-medium uppercase mb-4">Follow Me</h2>
-            <div className="text-gray-200">
+            <div className="text-gray-200 text-xl">
               <a
                 href="https://www.linkedin.com/in/muzamil167/"
                 target="_blank"
                 rel="noreferrer"
-                className="me-1.5 hover:text-blue-100 transition-all"
+                className="me-2.5 hover:text-blue-100 transition-all"
               >
                 <FontAwesomeIcon icon={faLinkedinIn} />
               </a>
@@ -56,7 +50,7 @@ const Contact = () => {
                 href="https://github.com/muzamil-frontend-dev"
                 target="_blank"
                 rel="noreferrer"
-                className="mx-1.5 hover:text-black-300 transition-all"
+                className="mx-2.5 hover:text-black-300 transition-all"
               >
                 <FontAwesomeIcon icon={faGithub} />
               </a>
@@ -64,7 +58,7 @@ const Contact = () => {
                 href="https://www.hackerrank.com/profile/hmuzamil567"
                 target="_blank"
                 rel="noreferrer"
-                className="mx-1.5 hover:text-black transition-all"
+                className="mx-2.5 hover:text-black transition-all"
               >
                 <FontAwesomeIcon icon={faXTwitter} />
               </a>
@@ -101,9 +95,8 @@ const Contact = () => {
           <article className="block md:hidden col-span-1 text-center">
             <h2 className="text-xl font-medium uppercase mb-4">Address</h2>
             <p className="text-gray-100 mb-6">
-              4th Floor, Plot No.22,
-              <br /> 145 Murphy Canyon Rd.
-              <br /> San Diego CA 2028
+              Sehar Road Baghbanpura
+              <br /> Lahore, Pakistan.
             </p>
             <div className="inline-block text-gray-100 mb-4">
               <p className="mb-1">
@@ -111,27 +104,23 @@ const Contact = () => {
                   icon={faPhoneAlt}
                   className="text-green me-2"
                 />
-                (060) 444 434 444
-              </p>
-              <p className="mb-1">
-                <FontAwesomeIcon icon={faFax} className="text-green me-2" />
-                (060) 555 545 555
+                (+92) 320 9482112
               </p>
               <p>
                 <FontAwesomeIcon
                   icon={faEnvelope}
                   className="text-green me-2"
                 />
-                chat@simone.com
+                hmuzamil567@gmail.com
               </p>
             </div>
             <h2 className="text-xl font-medium uppercase mb-4">Follow Me</h2>
-            <div className="text-gray-200">
+            <div className="text-gray-200 text-xl">
               <a
                 href="https://www.linkedin.com/in/muzamil167/"
                 target="_blank"
                 rel="noreferrer"
-                className="me-1.5 hover:text-blue-100 transition-all"
+                className="me-2.5 hover:text-blue-100 transition-all"
               >
                 <FontAwesomeIcon icon={faLinkedinIn} />
               </a>
@@ -139,7 +128,7 @@ const Contact = () => {
                 href="https://github.com/muzamil-frontend-dev"
                 target="_blank"
                 rel="noreferrer"
-                className="mx-1.5 hover:text-black-300 transition-all"
+                className="mx-2.5 hover:text-black-300 transition-all"
               >
                 <FontAwesomeIcon icon={faGithub} />
               </a>
@@ -147,7 +136,7 @@ const Contact = () => {
                 href="https://www.hackerrank.com/profile/hmuzamil567"
                 target="_blank"
                 rel="noreferrer"
-                className="mx-1.5 hover:text-black transition-all"
+                className="mx-2.5 hover:text-black transition-all"
               >
                 <FontAwesomeIcon icon={faXTwitter} />
               </a>
