@@ -93,7 +93,7 @@ const skills = [
 const Summary = () => {
   const targetElementRef = useRef(null);
   return (
-    <section className="bg-black-200 text-white" id="summary">
+    <section className="bg-gray-900 text-white" id="summary">
       <div className="container mx-auto py-18 px-8">
         <Heading title="summary" tagLine="resume" />
         <section className="grid gap-x-12 gap-y-4 grid-cols-1 sm:grid-cols-2">
