@@ -12,8 +12,7 @@ const educations = [
     institute: "EVS Professional Training Institute",
     tenure: "Oct 2022",
     description:
-      // "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
-      "In this course, I gained skills for my JavaScript development career by building database-driven applications.",
+      "In this course, I enhanced my JavaScript development skills by building database-driven applications.",
   },
   {
     name: "Mastering React",
@@ -23,11 +22,11 @@ const educations = [
       "Learn React basics and core concepts by building dynamic user interfaces and interactive applications.",
   },
   {
-    name: "Bachelor Degree",
+    name: "BS in Computer Science",
     institute: "University of South Asia",
     tenure: "2015 - 2020",
     description:
-      "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
+      "Learn Bachelor's degree to understand the fundamentals of computer systems and operations.",
   },
 ];
 
@@ -37,21 +36,21 @@ const experiences = [
     institute: "Starzplay Arabia",
     tenure: "2022 - Present",
     description:
-      "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
+      "Develop user interface components and implementing them following well-known React.js workflows such as Redux.",
   },
   {
     name: "Front End Developer",
     institute: "Approcx",
     tenure: "May 2022 - Nov 2022",
     description:
-      "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
+      "Managing different types of tables and grids for patients and doctors in hospital management system.",
   },
   {
     name: "Jr. Front End Developer",
     institute: "Magnic Digital Pvt Ltd",
     tenure: "2020 - 2022",
     description:
-      "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
+      "Develop user-facing features to determine the structure and design of web pages.",
   },
 ];
 
