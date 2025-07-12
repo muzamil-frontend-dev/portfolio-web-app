@@ -15,6 +15,11 @@
   width: calc(100% - 16rem);
 }
 
+.active-nav-item {
+  color: #20c997;
+  transition: all 0.2s ease;
+}
+
 @media only screen and (max-width: 1024px) {
   .parent-class {
     width: 100%;
