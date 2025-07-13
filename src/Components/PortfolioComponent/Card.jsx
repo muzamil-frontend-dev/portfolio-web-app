@@ -1,24 +1,25 @@
 import React, { useEffect, useState } from "react";
-import Modal from "react-modal";
+import { createPortal } from "react-dom";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import PortfolioModal from "./Modal";
 
 const Card = ({ image }) => {
-  const [modalIsOpen, setIsOpen] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
-    if (modalIsOpen) {
+    if (showModal) {
       document.body.style.overflow = "hidden";
     }
-  }, [modalIsOpen]);
+  }, [showModal]);
 
   const handleClick = () => {
-    setIsOpen(true);
+    setShowModal(true);
   };
 
   const handleCloseModal = () => {
-    setIsOpen(false);
+    setShowModal(false);
+    document.body.style.overflow = "auto";
   };
 
   return (
@@ -41,7 +42,22 @@ const Card = ({ image }) => {
         </div>
       </section>
       {/* Modal */}
-      <Modal
+      {showModal &&
+        createPortal(
+          <div className="fixed inset-0 flex items-center justify-center bg-slate bg-opacity-50 z-50">
+            <div className="bg-black-200 p-6 rounded-lg shadow-lg">
+              <button
+                className="absolute top-0 right-0 h-11 w-11 text-lg text-white opacity-65 transition hover:opacity-1"
+                onClick={handleCloseModal}
+              >
+                <FontAwesomeIcon icon={faXmark} />
+              </button>
+              <PortfolioModal />
+            </div>
+          </div>,
+          document.body
+        )}
+      {/* <Modal
         isOpen={modalIsOpen}
         onRequestClose={handleCloseModal}
         className="relative container p-7 bg-black-200"
@@ -49,13 +65,13 @@ const Card = ({ image }) => {
         ariaHideApp={false}
       >
         <button
-          className="absolute top-0 right-0 h-11 w-11 text-lg text-white opacity-65 transition hover:opacity-100"
+          className="absolute top-0 right-0 h-11 w-11 text-lg text-white opacity-65 transition hover:opacity-1"
           onClick={handleCloseModal}
         >
           <FontAwesomeIcon icon={faXmark} />
         </button>
         <PortfolioModal />
-      </Modal>
+      </Modal> */}
     </>
   );
 };

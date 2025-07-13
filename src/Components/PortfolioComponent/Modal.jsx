@@ -5,9 +5,9 @@ const Modal = () => {
     <section className="text-white">
       <h1 className="text-2xl text-center mb-6">Project Title 1</h1>
       <div className="grid grid-cols-2">
-        <div>
+        {/* <div>
           <img src="/images/portfolio/3.jpg" alt="" />
-        </div>
+        </div> */}
         <div>
           <h2>sdfdasf</h2>
         </div>
