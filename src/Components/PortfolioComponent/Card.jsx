@@ -7,14 +7,9 @@ import PortfolioModal from "./Modal";
 const Card = ({ image }) => {
   const [showModal, setShowModal] = useState(false);
 
-  useEffect(() => {
-    if (showModal) {
-      document.body.style.overflow = "hidden";
-    }
-  }, [showModal]);
-
   const handleClick = () => {
     setShowModal(true);
+    document.body.style.overflow = "hidden";
   };
 
   const handleCloseModal = () => {
@@ -44,15 +39,17 @@ const Card = ({ image }) => {
       {/* Modal */}
       {showModal &&
         createPortal(
-          <div className="fixed inset-0 flex items-center justify-center bg-slate bg-opacity-50 z-50">
-            <div className="bg-black-200 p-6 rounded-lg shadow-lg">
-              <button
-                className="absolute top-0 right-0 h-11 w-11 text-lg text-white opacity-65 transition hover:opacity-1"
-                onClick={handleCloseModal}
-              >
-                <FontAwesomeIcon icon={faXmark} />
-              </button>
-              <PortfolioModal />
+          <div className="fixed inset-0 flex items-start justify-center bg-slate bg-opacity-50 z-50 overflow-y-auto">
+            <div className="min-h-screen py-10 px-4 flex items-center justify-center w-full">
+              <div className="relative w-full max-w-6xl bg-black-200 p-6 shadow-lg">
+                <button
+                  className="absolute top-2 right-2 h-11 w-11 text-lg text-white opacity-65 transition hover:opacity-1"
+                  onClick={handleCloseModal}
+                >
+                  <FontAwesomeIcon icon={faXmark} />
+                </button>
+                <PortfolioModal />
+              </div>
             </div>
           </div>,
           document.body
