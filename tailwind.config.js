@@ -37,12 +37,19 @@ module.exports = {
         DEFAULT: "#111418",
         100: "#0077B5",
         200: "#80bdff",
+        300: "#00ACEE",
+        400: "#3F729B",
+        500: "#6567A5",
+        600: "#3B5998",
       },
       green: {
         DEFAULT: "#20c997",
         100: "#1baa80",
       },
-      red: "rgba(220, 53, 69, 1)",
+      red: {
+        DEFAULT: "rgba(220, 53, 69, 1)",
+        100: "#DD4B39",
+      },
       yellow: "rgba(255, 139, 7, 1)",
     },
     borderWidth: {
