@@ -4,7 +4,7 @@ import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import PortfolioModal from "./Modal";
 
-const Card = ({ image }) => {
+const Card = ({ product }) => {
   const [showModal, setShowModal] = useState(false);
 
   const handleClick = () => {
@@ -24,7 +24,11 @@ const Card = ({ image }) => {
         onClick={handleClick}
       >
         <div>
-          <img className="object-cover rounded-md" src={image} alt="img 1" />
+          <img
+            className="object-cover rounded-md"
+            src={product.img}
+            alt="img 1"
+          />
           <div
             className="invisible opacity-0 absolute inset-0 bg-slate rounded-md transition-opacity duration-300 group-hover/overlay:visible group-hover/overlay:opacity-100 
             group-hover/overlay:backdrop-blur-xs"
@@ -48,27 +52,12 @@ const Card = ({ image }) => {
                 >
                   <FontAwesomeIcon icon={faXmark} />
                 </button>
-                <PortfolioModal />
+                <PortfolioModal product={product} />
               </div>
             </div>
           </div>,
           document.body
         )}
-      {/* <Modal
-        isOpen={modalIsOpen}
-        onRequestClose={handleCloseModal}
-        className="relative container p-7 bg-black-200"
-        overlayClassName="fixed inset-x-10 top-10 bottom-0 bg-slate overflow-y-scroll"
-        ariaHideApp={false}
-      >
-        <button
-          className="absolute top-0 right-0 h-11 w-11 text-lg text-white opacity-65 transition hover:opacity-1"
-          onClick={handleCloseModal}
-        >
-          <FontAwesomeIcon icon={faXmark} />
-        </button>
-        <PortfolioModal />
-      </Modal> */}
     </>
   );
 };
