@@ -7,40 +7,256 @@ import PortfolioCard from "../Components/PortfolioComponent/Card";
 const portfolioTabs = ["all", "design", "brands", "photos"];
 const portfolioArr = [
   {
+    id: 1,
     name: "design",
+    title: "Project Title 1",
     img: "/images/portfolio/1.jpg",
+    description:
+      "Quidam lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure. Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
+    clientName: "Jonn Cena",
+    industry: "Puzzle Game",
+    technologies: "IOS, HTML5, CSS3, PHP, Java",
+    date: new Date().toLocaleDateString(),
+    productURL: "www.example.com",
+    socialLinks: [
+      {
+        icon: "facebook",
+        url: "www.facebook.com",
+        colorCode: "text-blue-600",
+      },
+      { icon: "twitter", url: "www.twitter.com", colorCode: "text-blue-300" },
+      { icon: "google", url: "www.google.com", colorCode: "text-red-100" },
+      {
+        icon: "instagram",
+        url: "www.instagram.com",
+        colorCode: "text-blue-400",
+      },
+      { icon: "Email", url: "www.email.com", colorCode: "text-blue-500" },
+    ],
   },
   {
+    id: 2,
     name: "design",
+    title: "Project Title 2",
     img: "/images/portfolio/3.jpg",
+    description:
+      "Quidam lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure. Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
+    clientName: "Jonn Cena",
+    industry: "Puzzle Game",
+    technologies: "IOS, HTML5, CSS3, PHP, Java",
+    date: new Date().toLocaleDateString(),
+    productURL: "www.example.com",
+    socialLinks: [
+      {
+        icon: "facebook",
+        url: "www.facebook.com",
+        colorCode: "text-blue-600",
+      },
+      { icon: "twitter", url: "www.twitter.com", colorCode: "text-blue-300" },
+      { icon: "google", url: "www.google.com", colorCode: "text-red-100" },
+      {
+        icon: "instagram",
+        url: "www.instagram.com",
+        colorCode: "text-blue-400",
+      },
+      { icon: "Email", url: "www.email.com", colorCode: "text-blue-500" },
+    ],
   },
   {
+    id: 3,
     name: "brands",
+    title: "Project Title 3",
     img: "/images/portfolio/2.jpg",
+    description:
+      "Quidam lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure. Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
+    clientName: "Jonn Cena",
+    industry: "Puzzle Game",
+    technologies: "IOS, HTML5, CSS3, PHP, Java",
+    date: new Date().toLocaleDateString(),
+    productURL: "www.example.com",
+    socialLinks: [
+      {
+        icon: "facebook",
+        url: "www.facebook.com",
+        colorCode: "text-blue-600",
+      },
+      { icon: "twitter", url: "www.twitter.com", colorCode: "text-blue-300" },
+      { icon: "google", url: "www.google.com", colorCode: "text-red-100" },
+      {
+        icon: "instagram",
+        url: "www.instagram.com",
+        colorCode: "text-blue-400",
+      },
+      { icon: "Email", url: "www.email.com", colorCode: "text-blue-500" },
+    ],
   },
   {
+    id: 4,
     name: "brands",
+    title: "Project Title 4",
     img: "/images/portfolio/4.jpg",
+    description:
+      "Quidam lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure. Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
+    clientName: "Jonn Cena",
+    industry: "Puzzle Game",
+    technologies: "IOS, HTML5, CSS3, PHP, Java",
+    date: new Date().toLocaleDateString(),
+    productURL: "www.example.com",
+    socialLinks: [
+      {
+        icon: "facebook",
+        url: "www.facebook.com",
+        colorCode: "text-blue-600",
+      },
+      { icon: "twitter", url: "www.twitter.com", colorCode: "text-blue-300" },
+      { icon: "google", url: "www.google.com", colorCode: "text-red-100" },
+      {
+        icon: "instagram",
+        url: "www.instagram.com",
+        colorCode: "text-blue-400",
+      },
+      { icon: "Email", url: "www.email.com", colorCode: "text-blue-500" },
+    ],
   },
   {
+    id: 5,
     name: "photos",
+    title: "Project Title 5",
     img: "/images/portfolio/3.jpg",
+    description:
+      "Quidam lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure. Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
+    clientName: "Jonn Cena",
+    industry: "Puzzle Game",
+    technologies: "IOS, HTML5, CSS3, PHP, Java",
+    date: new Date().toLocaleDateString(),
+    productURL: "www.example.com",
+    socialLinks: [
+      {
+        icon: "facebook",
+        url: "www.facebook.com",
+        colorCode: "text-blue-600",
+      },
+      { icon: "twitter", url: "www.twitter.com", colorCode: "text-blue-300" },
+      { icon: "google", url: "www.google.com", colorCode: "text-red-100" },
+      {
+        icon: "instagram",
+        url: "www.instagram.com",
+        colorCode: "text-blue-400",
+      },
+      { icon: "Email", url: "www.email.com", colorCode: "text-blue-500" },
+    ],
   },
   {
+    id: 6,
     name: "design",
+    title: "Project Title 6",
     img: "/images/portfolio/4.jpg",
+    description:
+      "Quidam lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure. Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
+    clientName: "Jonn Cena",
+    industry: "Puzzle Game",
+    technologies: "IOS, HTML5, CSS3, PHP, Java",
+    date: new Date().toLocaleDateString(),
+    productURL: "www.example.com",
+    socialLinks: [
+      {
+        icon: "facebook",
+        url: "www.facebook.com",
+        colorCode: "text-blue-600",
+      },
+      { icon: "twitter", url: "www.twitter.com", colorCode: "text-blue-300" },
+      { icon: "google", url: "www.google.com", colorCode: "text-red-100" },
+      {
+        icon: "instagram",
+        url: "www.instagram.com",
+        colorCode: "text-blue-400",
+      },
+      { icon: "Email", url: "www.email.com", colorCode: "text-blue-500" },
+    ],
   },
   {
+    id: 7,
     name: "brands",
+    title: "Project Title 7",
     img: "/images/portfolio/5.jpg",
+    description:
+      "Quidam lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure. Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
+    clientName: "Jonn Cena",
+    industry: "Puzzle Game",
+    technologies: "IOS, HTML5, CSS3, PHP, Java",
+    date: new Date().toLocaleDateString(),
+    productURL: "www.example.com",
+    socialLinks: [
+      {
+        icon: "facebook",
+        url: "www.facebook.com",
+        colorCode: "text-blue-600",
+      },
+      { icon: "twitter", url: "www.twitter.com", colorCode: "text-blue-300" },
+      { icon: "google", url: "www.google.com", colorCode: "text-red-100" },
+      {
+        icon: "instagram",
+        url: "www.instagram.com",
+        colorCode: "text-blue-400",
+      },
+      { icon: "Email", url: "www.email.com", colorCode: "text-blue-500" },
+    ],
   },
   {
+    id: 8,
     name: "photos",
+    title: "Project Title 8",
     img: "/images/portfolio/6.jpg",
+    description:
+      "Quidam lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure. Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
+    clientName: "Jonn Cena",
+    industry: "Puzzle Game",
+    technologies: "IOS, HTML5, CSS3, PHP, Java",
+    date: new Date().toLocaleDateString(),
+    productURL: "www.example.com",
+    socialLinks: [
+      {
+        icon: "facebook",
+        url: "www.facebook.com",
+        colorCode: "text-blue-600",
+      },
+      { icon: "twitter", url: "www.twitter.com", colorCode: "text-blue-300" },
+      { icon: "google", url: "www.google.com", colorCode: "text-red-100" },
+      {
+        icon: "instagram",
+        url: "www.instagram.com",
+        colorCode: "text-blue-400",
+      },
+      { icon: "Email", url: "www.email.com", colorCode: "text-blue-500" },
+    ],
   },
   {
+    id: 9,
     name: "photos",
+    title: "Project Title 9",
     img: "/images/portfolio/7.jpg",
+    description:
+      "Quidam lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure. Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
+    clientName: "Jonn Cena",
+    industry: "Puzzle Game",
+    technologies: "IOS, HTML5, CSS3, PHP, Java",
+    date: new Date().toLocaleDateString(),
+    productURL: "www.example.com",
+    socialLinks: [
+      {
+        icon: "facebook",
+        url: "www.facebook.com",
+        colorCode: "text-blue-600",
+      },
+      { icon: "twitter", url: "www.twitter.com", colorCode: "text-blue-300" },
+      { icon: "google", url: "www.google.com", colorCode: "text-red-100" },
+      {
+        icon: "instagram",
+        url: "www.instagram.com",
+        colorCode: "text-blue-400",
+      },
+      { icon: "Email", url: "www.email.com", colorCode: "text-blue-500" },
+    ],
   },
 ];
 
@@ -92,8 +308,8 @@ const Portfolio = () => {
           className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6 px-4 transition"
           ref={ref}
         >
-          {filterProducts.map((product, i) => (
-            <PortfolioCard key={i} image={product.img} />
+          {filterProducts.map((product) => (
+            <PortfolioCard key={product.id} product={product} />
           ))}
         </ul>
       </div>
