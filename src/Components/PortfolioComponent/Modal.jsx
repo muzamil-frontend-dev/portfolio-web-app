@@ -57,8 +57,8 @@ const Modal = ({ product }) => {
             </a>
           </p>
           <p className="py-3">
-            <span className="text-gray-100">Share: &nbsp;</span>
-            <div className="inline-flex space-x-3">
+            <span className="text-gray-100 pe-4">Share:</span>
+            <div className="inline-flex space-x-4">
               {product.socialLinks.map((link, index) => (
                 <a
                   key={index}
