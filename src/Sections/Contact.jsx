@@ -7,7 +7,7 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons/faGithub";
 
 const Contact = () => {
   return (
-    <section className="bg-gray-900 text-white" id="contact-us">
+    <section className="bg-black-200 text-white" id="contact-us">
       <div className="container mx-auto py-18 px-8">
         <Heading title="contact" tagLine="get in touch" />
         <section className="grid grid-cols-1 gap-y-12 md:grid-cols-6 xl:gap-x-0">

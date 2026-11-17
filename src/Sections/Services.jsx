@@ -1,61 +1,23 @@
 import React from "react";
 import Heading from "../Components/Heading";
 import ServiceBox from "../Components/ServiceBox";
-
-const servicesList = [
-  {
-    name: "graphic",
-    title: "Graphic Design",
-    description:
-      "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
-  },
-  {
-    name: "web",
-    title: "Web Design",
-    description:
-      "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
-  },
-  {
-    name: "ui",
-    title: "UI/UX Design",
-    description:
-      "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
-  },
-  {
-    name: "app",
-    title: "App Design & Develop",
-    description:
-      "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
-  },
-  {
-    name: "buisness",
-    title: "Buisness Analysis",
-    description:
-      "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
-  },
-  {
-    name: "seo",
-    title: "Seo Marketing",
-    description:
-      "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
-  },
-];
+import { services } from "../data/services";
 
 const Services = () => {
   return (
     <section className="bg-gray-900 text-white" id="services">
-      <div className="container mx-auto pt-18 px-3 lg:px-8">
+      <div className="container mx-auto py-18 px-3 sm:px-8">
         <Heading title="services" tagLine="what I do?" />
-        <section className="flex flex-wrap">
-          {servicesList.map((service, i) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12 lg:w-11/12 mx-auto">
+          {services.map((service) => (
             <ServiceBox
-              key={i}
-              name={service.name}
+              key={service.id}
+              icon={service.icon}
               title={service.title}
               description={service.description}
             />
           ))}
-        </section>
+        </div>
       </div>
     </section>
   );

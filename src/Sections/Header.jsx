@@ -17,7 +17,7 @@ const Header = () => {
       const sections = [
         { name: "home", element: document.getElementById("home") },
         { name: "about", element: document.getElementById("about") },
-        // { name: "services", element: document.getElementById("services") },
+        { name: "services", element: document.getElementById("services") },
         { name: "summary", element: document.getElementById("summary") },
         { name: "portfolio", element: document.getElementById("portfolio") },
         // {
@@ -55,7 +55,7 @@ const Header = () => {
   const menuItems = [
     { name: "Home", url: "#home" },
     { name: "About Me", url: "#about" },
-    // { name: "What I Do", url: "#services" },
+    { name: "What I Do", url: "#services" },
     { name: "Resume", url: "#summary" },
     { name: "Portfolio", url: "#portfolio" },
     // { name: "Testimonial", url: "#testimonial" },
