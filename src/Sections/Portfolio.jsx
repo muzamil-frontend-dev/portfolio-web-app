@@ -67,7 +67,7 @@ const Portfolio = () => {
   const hasSiblings = count > 1;
 
   return (
-    <section className="bg-black-200 text-white" id="portfolio">
+    <section className="bg-gray-900 text-white" id="portfolio">
       <div className="container mx-auto py-18 px-8">
         <Heading title="portfolio" tagLine="my work" />
         {/* Filter tabs */}
