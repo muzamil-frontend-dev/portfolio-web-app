@@ -1,75 +1,37 @@
-import React, { useEffect, useState } from "react";
-import { createPortal } from "react-dom";
-import { faXmark } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import PortfolioModal from "./Modal";
+import React from "react";
 
-const Card = ({ image }) => {
-  const [showModal, setShowModal] = useState(false);
-
-  const handleClick = () => {
-    setShowModal(true);
-    document.body.style.overflow = "hidden";
-  };
-
-  const handleCloseModal = () => {
-    setShowModal(false);
-    document.body.style.overflow = "auto";
-  };
-
+// Grid item. Isotope positions these absolutely and filters them by
+// `data-category`, so the width/padding classes here define the columns and
+// gutter (mirrors the reference's `col-sm-6 col-lg-4` + `g-4`).
+const Card = ({ project, categoryLabel, onClick }) => {
   return (
-    <>
-      <section
-        className="group/overlay relative h-min w-full bg-red-400 rounded-md"
-        onClick={handleClick}
+    <li
+      className="portfolio-item w-full sm:w-1/2 lg:w-1/3 px-3 pb-6"
+      data-category={project.category}
+    >
+      <button
+        type="button"
+        className="group/overlay relative block w-full rounded-md overflow-hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-green"
+        onClick={onClick}
+        aria-label={`Open ${project.title}`}
       >
-        <div>
-          <img className="object-cover rounded-md" src={image} alt="img 1" />
-          <div
-            className="invisible opacity-0 absolute inset-0 bg-slate rounded-md transition-opacity duration-300 group-hover/overlay:visible group-hover/overlay:opacity-100 
-            group-hover/overlay:backdrop-blur-xs"
-          >
-            <div className="flex justify-center items-center flex-col h-full">
-              <p>Project Title</p>
-              <span>Category</span>
-            </div>
+        <img
+          className="w-full aspect-[4/3] object-cover rounded-md"
+          src={project.thumbnail}
+          alt={project.title}
+        />
+        <div
+          className="invisible opacity-0 absolute inset-0 bg-slate rounded-md transition-opacity duration-300
+          group-hover/overlay:visible group-hover/overlay:opacity-100 group-hover/overlay:backdrop-blur-xs
+          group-focus-visible/overlay:visible group-focus-visible/overlay:opacity-100"
+        >
+          <div className="flex justify-center items-center flex-col h-full">
+            <p className="text-lg font-medium">{project.title}</p>
+            <span className="text-slate-300">{categoryLabel}</span>
           </div>
         </div>
-      </section>
-      {/* Modal */}
-      {showModal &&
-        createPortal(
-          <div className="fixed inset-0 flex items-start justify-center bg-slate bg-opacity-50 z-50 overflow-y-auto">
-            <div className="min-h-screen py-10 px-4 flex items-center justify-center w-full">
-              <div className="relative w-full max-w-6xl bg-black-200 p-6 shadow-lg">
-                <button
-                  className="absolute top-2 right-2 h-11 w-11 text-lg text-white opacity-65 transition hover:opacity-1"
-                  onClick={handleCloseModal}
-                >
-                  <FontAwesomeIcon icon={faXmark} />
-                </button>
-                <PortfolioModal />
-              </div>
-            </div>
-          </div>,
-          document.body
-        )}
-      {/* <Modal
-        isOpen={modalIsOpen}
-        onRequestClose={handleCloseModal}
-        className="relative container p-7 bg-black-200"
-        overlayClassName="fixed inset-x-10 top-10 bottom-0 bg-slate overflow-y-scroll"
-        ariaHideApp={false}
-      >
-        <button
-          className="absolute top-0 right-0 h-11 w-11 text-lg text-white opacity-65 transition hover:opacity-1"
-          onClick={handleCloseModal}
-        >
-          <FontAwesomeIcon icon={faXmark} />
-        </button>
-        <PortfolioModal />
-      </Modal> */}
-    </>
+      </button>
+    </li>
   );
 };
 
