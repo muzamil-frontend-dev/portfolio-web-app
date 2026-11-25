@@ -1,46 +1,34 @@
 import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faGithub,
-  faLinkedinIn,
-  faXTwitter,
-} from "@fortawesome/free-brands-svg-icons";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import classNames from "classnames";
+import SocialLinks from "../Components/SocialLinks";
+import { profile } from "../data/profile";
+
+const menuItems = [
+  { name: "Home", id: "home" },
+  { name: "About Me", id: "about" },
+  { name: "What I Do", id: "services" },
+  { name: "Resume", id: "summary" },
+  { name: "Portfolio", id: "portfolio" },
+  // { name: "Testimonial", id: "testimonial" },
+  { name: "Contact", id: "contact-us" },
+];
 
 const Header = () => {
-  const [openMenu, setOpenMenu] = useState(true);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
+    // Highlight the last section whose top has scrolled past the header.
     const handleScroll = () => {
-      const sections = [
-        { name: "home", element: document.getElementById("home") },
-        { name: "about", element: document.getElementById("about") },
-        { name: "services", element: document.getElementById("services") },
-        { name: "summary", element: document.getElementById("summary") },
-        { name: "portfolio", element: document.getElementById("portfolio") },
-        // {
-        //   name: "testimonial",
-        //   element: document.getElementById("testimonial"),
-        // },
-        { name: "contact-us", element: document.getElementById("contact-us") },
-      ];
-
       let currentSection = "";
-
-      for (const section of sections) {
-        if (section.element) {
-          const rect = section.element.getBoundingClientRect();
-          if (rect.top <= 100 && rect.bottom >= 100) {
-            currentSection = section.name;
-            break;
-          } else if (rect.top <= 100) {
-            currentSection = section.name;
-          }
+      for (const { id } of menuItems) {
+        const element = document.getElementById(id);
+        if (element && element.getBoundingClientRect().top <= 100) {
+          currentSection = id;
         }
       }
-
       setActiveSection(currentSection);
     };
 
@@ -52,15 +40,7 @@ const Header = () => {
     };
   }, []);
 
-  const menuItems = [
-    { name: "Home", url: "#home" },
-    { name: "About Me", url: "#about" },
-    { name: "What I Do", url: "#services" },
-    { name: "Resume", url: "#summary" },
-    { name: "Portfolio", url: "#portfolio" },
-    // { name: "Testimonial", url: "#testimonial" },
-    { name: "Contact", url: "#contact-us" },
-  ];
+  const closeMenu = () => setIsMenuOpen(false);
 
   return (
     <header className="lg:w-64">
@@ -75,122 +55,68 @@ const Header = () => {
               alt="profile"
             />
           </div>
-          <h1 className="text-xl text-center text-white">Muzamil Hussain</h1>
+          <h1 className="text-xl text-center text-white">{profile.name}</h1>
         </a>
         <ul className="my-4">
-          {menuItems.map((item, index) => (
+          {menuItems.map((item) => (
             <li
-              key={index}
+              key={item.id}
               className={classNames(
                 "py-2 text-lg text-white text-center transition duration-300 ease-in-out hover:text-green",
-                {
-                  "active-nav-item": activeSection === item.url.slice(1), // Remove '#'
-                }
+                { "active-nav-item": activeSection === item.id }
               )}
             >
-              <a href={item.url}>{item.name}</a>
+              <a href={`#${item.id}`}>{item.name}</a>
             </li>
           ))}
         </ul>
-        <ul className="flex justify-center items-center mb-2">
-          <li className="text-sm text-gray-200">
-            <a
-              href="https://www.linkedin.com/in/muzamil167/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FontAwesomeIcon icon={faLinkedinIn} />
-            </a>
-          </li>
-          <li className="text-sm text-gray-200 mx-6">
-            <a
-              href="https://github.com/muzamil-frontend-dev"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FontAwesomeIcon icon={faGithub} />
-            </a>
-          </li>
-          <li className="text-sm text-gray-200">
-            <a
-              href="https://www.hackerrank.com/profile/hmuzamil567"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FontAwesomeIcon icon={faXTwitter} />
-            </a>
-          </li>
-        </ul>
+        <SocialLinks className="flex justify-center items-center gap-6 mb-2 text-sm text-gray-200" />
       </nav>
 
       {/* Tab/Mobile Nav Menu view */}
       <nav className="fixed top-0 left-0 w-full bg-black-100 z-10 lg:hidden">
         <section className="flex justify-between items-center py-4 px-4">
-          <a href="#home">
-            <h1 className="text-xl text-white">Muzamil Hussain</h1>
+          <a href="#home" onClick={closeMenu}>
+            <h1 className="text-xl text-white">{profile.name}</h1>
           </a>
           <div className="flex items-center">
-            <ul className="inline-flex mr-5">
-              <li className="text-sm text-gray-200">
-                <a
-                  href="https://www.linkedin.com/in/muzamil167/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <FontAwesomeIcon icon={faLinkedinIn} />
-                </a>
-              </li>
-              <li className="text-sm text-gray-200 mx-5">
-                <a
-                  href="https://github.com/muzamil-frontend-dev"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <FontAwesomeIcon icon={faGithub} />
-                </a>
-              </li>
-              <li className="text-sm text-gray-200">
-                <a
-                  href="https://www.hackerrank.com/profile/hmuzamil567"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <FontAwesomeIcon icon={faXTwitter} />
-                </a>
-              </li>
-            </ul>
-            <div
+            <SocialLinks className="inline-flex gap-5 mr-5 text-sm text-gray-200" />
+            <button
+              type="button"
               className="flex justify-center items-center w-7 h-7 text-white text-2xl"
-              onClick={() => setOpenMenu((prev) => !prev)}
+              aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+              aria-expanded={isMenuOpen}
+              aria-controls="mobile-menu"
+              onClick={() => setIsMenuOpen((open) => !open)}
             >
-              <FontAwesomeIcon icon={openMenu ? faBars : faXmark} />
-            </div>
+              <FontAwesomeIcon icon={isMenuOpen ? faXmark : faBars} />
+            </button>
           </div>
         </section>
         {/* Toggle Menu */}
         <section
+          id="mobile-menu"
           className={classNames(
             "absolute w-full max-h-hvh bg-slate-100 overflow-y-auto transition-all duration-700 ease-in-out",
-            {
-              "invisible opacity-0": openMenu,
-            },
-            {
-              "visible opacity-100": !openMenu,
-            }
+            isMenuOpen ? "visible opacity-100" : "invisible opacity-0"
           )}
         >
           <ul className="mt-2">
-            {menuItems.map((item, index) => (
+            {menuItems.map((item) => (
               <li
-                key={index}
+                key={item.id}
                 className={classNames(
-                  "py-2 px-4 text-white border-b border-slate-200",
-                  {
-                    "active-nav-item": activeSection === item.url.slice(1), // Remove '#'
-                  }
+                  "border-b border-slate-200 text-white",
+                  { "active-nav-item": activeSection === item.id }
                 )}
               >
-                <a href={item.url}>{item.name}</a>
+                <a
+                  href={`#${item.id}`}
+                  className="block py-2 px-4"
+                  onClick={closeMenu}
+                >
+                  {item.name}
+                </a>
               </li>
             ))}
           </ul>

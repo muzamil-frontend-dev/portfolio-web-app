@@ -11,9 +11,17 @@ import {
  * Generic modal rendered into document.body.
  * Mount it only while open. Closes on the X button, Escape and backdrop click,
  * and locks page scroll while mounted. Pass `onPrev` / `onNext` to show side
- * arrows that also respond to the left/right arrow keys.
+ * arrows that also respond to the left/right arrow keys. `maxWidth` takes a
+ * full Tailwind class, e.g. "max-w-3xl".
  */
-const Modal = ({ onClose, onPrev, onNext, label, children }) => {
+const Modal = ({
+  onClose,
+  onPrev,
+  onNext,
+  label,
+  maxWidth = "max-w-6xl",
+  children,
+}) => {
   const closeButtonRef = useRef(null);
 
   // Lock page scroll and manage focus for as long as the modal is mounted.
@@ -78,7 +86,9 @@ const Modal = ({ onClose, onPrev, onNext, label, children }) => {
         className="min-h-screen py-10 px-12 md:px-20 flex items-center justify-center w-full"
         onClick={handleBackdropClick}
       >
-        <div className="relative w-full max-w-6xl bg-black-200 p-6 md:p-8 shadow-lg">
+        <div
+          className={`relative w-full ${maxWidth} bg-black-200 p-6 md:p-8 shadow-lg`}
+        >
           <button
             ref={closeButtonRef}
             type="button"

@@ -7,6 +7,7 @@ import Portfolio from "./Sections/Portfolio";
 // import Testimonial from "./Sections/Testimonial";
 import Contact from "./Sections/Contact";
 import Footer from "./Sections/Footer";
+import BackToTop from "./Components/BackToTop";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Contact />
         <Footer />
       </div>
+      <BackToTop />
     </div>
   );
 }

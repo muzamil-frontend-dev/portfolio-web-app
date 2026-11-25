@@ -2,6 +2,7 @@ import React from "react";
 import CountUp from "react-countup";
 import Heading from "../Components/Heading";
 import Button from "../Components/Button";
+import { profile } from "../data/profile";
 
 const About = () => {
   return (
@@ -29,12 +30,12 @@ const About = () => {
             <ul className="mb-4">
               <li className="py-3 border-b border-slate-400">
                 <span className="font-semibold">Name:</span>&nbsp;&nbsp;
-                <span>Muzamil Hussain</span>
+                <span>{profile.name}</span>
               </li>
               <li className="py-3 border-b border-slate-400">
-                <span className="font-semibold">Emal:</span>&nbsp;&nbsp;
-                <a href="https://" className="text-green">
-                  hmuzamil567@gmail.com
+                <span className="font-semibold">Email:</span>&nbsp;&nbsp;
+                <a href={`mailto:${profile.email}`} className="text-green">
+                  {profile.email}
                 </a>
               </li>
               {/* <li className="py-3 border-b border-slate-400">
@@ -43,11 +44,15 @@ const About = () => {
               </li> */}
               <li className="py-3">
                 <span className="font-semibold">From:</span>&nbsp;&nbsp;
-                <span>Lahore, Pakistan</span>
+                <span>{profile.location}</span>
               </li>
             </ul>
-            <Button className="bg-green hover:bg-green-100">
-              <a href="https://">Download CV</a>
+            <Button
+              href={profile.cvUrl}
+              download={profile.cvFileName}
+              className="bg-green hover:bg-green-100"
+            >
+              Download CV
             </Button>
           </div>
         </section>

@@ -5,6 +5,7 @@ import SkillBox from "../Components/SkillBox";
 import Button from "../Components/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
+import { profile } from "../data/profile";
 
 const educations = [
   {
@@ -136,8 +137,12 @@ const Summary = () => {
           ))}
         </section>
         <div className="mt-18 text-center">
-          <Button className="text-gray-800 border-2 border-gray-800 hover:bg-gray-800 hover:text-white">
-            <a href="https://">Download CV</a>
+          <Button
+            href={profile.cvUrl}
+            download={profile.cvFileName}
+            className="text-gray-800 border-2 border-gray-800 hover:bg-gray-800 hover:text-white"
+          >
+            Download CV
             <FontAwesomeIcon icon={faDownload} className="ml-2" />
           </Button>
         </div>
